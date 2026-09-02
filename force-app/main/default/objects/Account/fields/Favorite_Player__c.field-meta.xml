@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Favorite_Player__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>팬의 최애 선수</description>
+    <inlineHelpText>팬이 가장 선호하는 선수를 선택</inlineHelpText>
+    <label>Favorite Player</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Accounts</relationshipLabel>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

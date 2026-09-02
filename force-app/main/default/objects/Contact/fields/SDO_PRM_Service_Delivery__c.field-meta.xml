@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_PRM_Service_Delivery__c</fullName>
+    <description>파트너 기업 담당자가 담당하는 서비스 제공 유형. Lead의 Service Delivery 값과 동일한 픽리스트로 구성되어 Convert 시 매핑됩니다.</description>
+    <inlineHelpText>이 담당자가 주로 관여하는 서비스 유형을 선택합니다. (예: Migration, IT Solutions)</inlineHelpText>
+    <label>Service Delivery</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Migration</fullName>
+                <default>false</default>
+                <label>Migration</label>
+            </value>
+            <value>
+                <fullName>Installation</fullName>
+                <default>false</default>
+                <label>Installation</label>
+            </value>
+            <value>
+                <fullName>Data Management</fullName>
+                <default>false</default>
+                <label>Data Management</label>
+            </value>
+            <value>
+                <fullName>IT Solutions</fullName>
+                <default>false</default>
+                <label>IT Solutions</label>
+            </value>
+            <value>
+                <fullName>Reporting</fullName>
+                <default>false</default>
+                <label>Reporting</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

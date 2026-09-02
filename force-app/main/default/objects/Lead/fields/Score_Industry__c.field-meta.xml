@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Score_Industry__c</fullName>
+    <description>업종 적합도 점수 (25점 만점). Industry 값 기반 등급 매핑.</description>
+    <externalId>false</externalId>
+    <formula>CASE(Industry,
+&quot;Apparel&quot;,25,
+&quot;Banking&quot;,25,
+&quot;Cosmetics / Beauty&quot;,25,
+&quot;Entertainment&quot;,25,
+&quot;Financial Services&quot;,25,
+&quot;Food &amp; Beverage&quot;,25,
+&quot;Insurance&quot;,25,
+&quot;Media&quot;,25,
+&quot;Retail&quot;,25,
+&quot;Telecommunications&quot;,25,
+&quot;Chemicals&quot;,15,
+&quot;Communications&quot;,15,
+&quot;Construction&quot;,15,
+&quot;Consulting&quot;,15,
+&quot;Electronics&quot;,15,
+&quot;Government&quot;,15,
+&quot;Healthcare &amp; Life Sciences&quot;,15,
+&quot;Hospitality&quot;,15,
+&quot;Recreation&quot;,15,
+&quot;Technology&quot;,15,
+&quot;Agriculture&quot;,5,
+&quot;Biotechnology&quot;,5,
+&quot;Education&quot;,5,
+&quot;Energy&quot;,5,
+&quot;Engineering&quot;,5,
+&quot;Environmental&quot;,5,
+&quot;Machinery&quot;,5,
+&quot;Manufacturing&quot;,5,
+&quot;Not For Profit&quot;,5,
+&quot;Shipping&quot;,5,
+&quot;Transportation&quot;,5,
+&quot;Utilities&quot;,5,
+0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Industry Fit Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

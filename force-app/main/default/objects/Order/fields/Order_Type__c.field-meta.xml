@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Type__c</fullName>
+    <description>주문이 티켓 구매, 굿즈 구매 또는 멤버십 가입 중 어떤 거래에 해당하는지 구분</description>
+    <inlineHelpText>주문이 티켓 구매, 굿즈 구매 또는 멤버십 가입 중 어떤 거래에 해당하는지 구분</inlineHelpText>
+    <label>Order Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ticket Purchase</fullName>
+                <default>false</default>
+                <label>Ticket Purchase</label>
+            </value>
+            <value>
+                <fullName>Goods Purchase</fullName>
+                <default>false</default>
+                <label>Goods Purchase</label>
+            </value>
+            <value>
+                <fullName>Membership Enrollment</fullName>
+                <default>false</default>
+                <label>Membership Enrollment</label>
+            </value>
+            <value>
+                <fullName>Season Ticket Enrollment</fullName>
+                <default>false</default>
+                <label>Season Ticket Enrollment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

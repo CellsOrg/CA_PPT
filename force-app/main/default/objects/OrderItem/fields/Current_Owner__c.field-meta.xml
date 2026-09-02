@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Owner__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>티켓을 현재 보유하고 사용할 수 있는 팬(Person Account)을 참조(최초값은 구매자이며, 티켓 양도 시 양도 받은 이로 변경)</description>
+    <inlineHelpText>티켓을 현재 보유하고 사용할 수 있는 팬(Person Account)을 참조(최초값은 구매자이며, 티켓 양도 시 양도 받은 이로 변경)</inlineHelpText>
+    <label>Current Owner</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Order Products</relationshipLabel>
+    <relationshipName>Order_Products</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

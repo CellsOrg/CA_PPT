@@ -1,0 +1,1068 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004rWKPCA2"
+        },
+        "DeveloperName": "activityIntelligence",
+        "MasterLabel": "Activity Intelligence",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedDate": "2026-08-26T21:36:59.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004pEkzCAE"
+        },
+        "DeveloperName": "activityOverview",
+        "MasterLabel": "Activity Overview",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedDate": "2026-08-25T23:35:02.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004tTWvCAM"
+        },
+        "DeveloperName": "activityTimeline",
+        "MasterLabel": "Interactions",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedDate": "2026-08-27T17:35:43.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004ygV7CAI"
+        },
+        "DeveloperName": "campaignAgentChat",
+        "MasterLabel": "Campaign Agent Chat",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSwzAAH"
+          },
+          "Name": "Rafael Espada"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSwzAAH"
+          },
+          "Name": "Rafael Espada"
+        },
+        "LastModifiedDate": "2026-08-31T06:40:11.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004ygV8CAI"
+        },
+        "DeveloperName": "campaignAgentChatModal",
+        "MasterLabel": "Campaign Agent Chat Modal",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSwzAAH"
+          },
+          "Name": "Rafael Espada"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSwzAAH"
+          },
+          "Name": "Rafael Espada"
+        },
+        "LastModifiedDate": "2026-08-31T06:40:12.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004bIQHCA2"
+        },
+        "DeveloperName": "campaignBoard",
+        "MasterLabel": "캠페인 관리 보드",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T10:37:44.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004myyrCAA"
+        },
+        "DeveloperName": "fan360Landing",
+        "MasterLabel": "fan360Landing",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T08:25:51.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004asM9CAI"
+        },
+        "DeveloperName": "fan360Summary",
+        "MasterLabel": "fan360Summary",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T08:25:51.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004sg1ZCAQ"
+        },
+        "DeveloperName": "fanDetailDrawer",
+        "MasterLabel": "fanDetailDrawer",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T08:25:51.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004sg1aCAA"
+        },
+        "DeveloperName": "fanList",
+        "MasterLabel": "fanList",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T08:25:51.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004sg1bCAA"
+        },
+        "DeveloperName": "fanListKpiCards",
+        "MasterLabel": "fanListKpiCards",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T08:25:51.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004sg1cCAA"
+        },
+        "DeveloperName": "fanListSearchFilter",
+        "MasterLabel": "fanListSearchFilter",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T08:25:51.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004sg1dCAA"
+        },
+        "DeveloperName": "fanListTable",
+        "MasterLabel": "fanListTable",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T08:25:51.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004cSozCAE"
+        },
+        "DeveloperName": "fanRecommendedActions",
+        "MasterLabel": "추천 액션 (Recommended Actions)",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T08:25:51.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004cSp0CAE"
+        },
+        "DeveloperName": "fanSummary",
+        "MasterLabel": "팬 요약 (Summary)",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T08:25:51.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004cSp1CAE"
+        },
+        "DeveloperName": "fanTimeline",
+        "MasterLabel": "팬 타임라인 (Timeline)",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T08:25:52.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004avofCAA"
+        },
+        "DeveloperName": "gameDetail",
+        "MasterLabel": "경기 상세",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T08:25:52.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004xhOPCAY"
+        },
+        "DeveloperName": "icon",
+        "MasterLabel": "icon",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T12:27:18.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004vFRRCA2"
+        },
+        "DeveloperName": "leadAiSummaryCard",
+        "MasterLabel": "leadAiSummaryCard",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedDate": "2026-08-28T07:47:43.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004wjtyCAA"
+        },
+        "DeveloperName": "liveFanQuizEntry",
+        "MasterLabel": "Live Fan Quiz Entry",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-31T05:28:03.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004wpflCAA"
+        },
+        "DeveloperName": "liveFanQuizReveal",
+        "MasterLabel": "Live Fan Quiz Reveal",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-31T05:55:14.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004x4YLCAY"
+        },
+        "DeveloperName": "negotiationContextSummary",
+        "MasterLabel": "Negotiation Context Summary",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedDate": "2026-08-29T12:18:51.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004x8LpCAI"
+        },
+        "DeveloperName": "opportunityAgentChat",
+        "MasterLabel": "Opportunity Agent Chat",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedDate": "2026-08-30T09:36:08.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004xBErCAM"
+        },
+        "DeveloperName": "opportunityAgentChatModal",
+        "MasterLabel": "Opportunity Agent Chat Modal",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedDate": "2026-08-30T04:59:34.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004xx4zCAA"
+        },
+        "DeveloperName": "opportunityStageGuidance",
+        "MasterLabel": "Opportunity Stage Guidance",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedDate": "2026-08-30T09:36:08.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004yQ0XCAU"
+        },
+        "DeveloperName": "partnershipInquiry",
+        "MasterLabel": "Partnership Inquiry",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedDate": "2026-08-30T22:28:31.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004jA0vCAE"
+        },
+        "DeveloperName": "prm360RevenueSummary",
+        "MasterLabel": "prm360RevenueSummary",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedDate": "2026-08-20T10:45:20.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004porhCAA"
+        },
+        "DeveloperName": "prmClosingSoonOpportunities",
+        "MasterLabel": "PRM Closing Soon Opportunities",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedDate": "2026-08-28T04:28:26.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004poriCAA"
+        },
+        "DeveloperName": "prmHighPotentialLeads",
+        "MasterLabel": "PRM High Potential Leads",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedDate": "2026-08-28T04:28:26.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004porjCAA"
+        },
+        "DeveloperName": "prmKeyOpportunities",
+        "MasterLabel": "PRM Key Opportunities",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedDate": "2026-08-26T05:03:14.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004porkCAA"
+        },
+        "DeveloperName": "prmMyTasks",
+        "MasterLabel": "PRM My Tasks",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedDate": "2026-08-28T04:28:26.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004qZiXCAU"
+        },
+        "DeveloperName": "prmOpenSponsorshipPipeline",
+        "MasterLabel": "PRM Open Sponsorship Pipeline",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedDate": "2026-08-28T04:28:26.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004porlCAA"
+        },
+        "DeveloperName": "prmQuickLinks",
+        "MasterLabel": "PRM Quick Links",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedDate": "2026-08-28T08:08:32.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004s9btCAA"
+        },
+        "DeveloperName": "prmSalesBriefing",
+        "MasterLabel": "PRM Sales Briefing",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedDate": "2026-08-28T04:44:29.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004qZiYCAU"
+        },
+        "DeveloperName": "prmSeasonClosedWonRevenue",
+        "MasterLabel": "PRM Season Closed Won Revenue",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedDate": "2026-08-28T04:28:26.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004qROPCA2"
+        },
+        "DeveloperName": "prmSeasonTargetAttainment",
+        "MasterLabel": "PRM Season Target Attainment",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedDate": "2026-08-28T04:28:26.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004pzaDCAQ"
+        },
+        "DeveloperName": "prmTodaysEvents",
+        "MasterLabel": "PRM Todays Events",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedDate": "2026-08-28T04:28:26.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004qROQCA2"
+        },
+        "DeveloperName": "prmYoyRevenue",
+        "MasterLabel": "PRM YoY Revenue",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJSddAAH"
+          },
+          "Name": "Hyejune Jo"
+        },
+        "LastModifiedDate": "2026-08-28T04:28:26.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004at0TCAQ"
+        },
+        "DeveloperName": "recommendationDashboard",
+        "MasterLabel": "세그먼트 기회 대시보드",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedDate": "2026-08-19T05:25:23.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004t19FCAQ"
+        },
+        "DeveloperName": "recommendationReviewPanel",
+        "MasterLabel": "recommendationReviewPanel",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T08:25:52.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004mtKrCAI"
+        },
+        "DeveloperName": "recommendationSegmentDashboard",
+        "MasterLabel": "recommendationSegmentDashboard",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-30T08:25:52.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004cN4XCAU"
+        },
+        "DeveloperName": "reportDashboard",
+        "MasterLabel": "리포트 대시보드",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJRuTAAX"
+          },
+          "Name": "Sara Bang"
+        },
+        "LastModifiedDate": "2026-08-31T05:08:54.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004hcSjCAI"
+        },
+        "DeveloperName": "segmentFanList",
+        "MasterLabel": "segmentFanList",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedDate": "2026-08-19T05:25:23.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004at0UCAQ"
+        },
+        "DeveloperName": "segmentOpportunities",
+        "MasterLabel": "segmentOpportunities",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedDate": "2026-08-19T05:25:23.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004xxrNCAQ"
+        },
+        "DeveloperName": "stageGuidance",
+        "MasterLabel": "Stage Guidance",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedDate": "2026-08-30T19:43:47.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "LightningComponentBundle",
+          "url": "/services/data/v67.0/tooling/sobjects/LightningComponentBundle/0Rbbm000004p8CXCAY"
+        },
+        "DeveloperName": "stageProgress",
+        "MasterLabel": "Stage Progress",
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v67.0/tooling/sobjects/User/005bm00000UJFDOAA5"
+          },
+          "Name": "Eunyeong Doh"
+        },
+        "LastModifiedDate": "2026-08-27T05:29:49.000+0000"
+      }
+    ],
+    "totalSize": 46,
+    "done": true
+  },
+  "warnings": []
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position__c</fullName>
+    <description>선수의 포지션</description>
+    <inlineHelpText>선수의 포지션 입력(투수, 포수, 내야수 등등)</inlineHelpText>
+    <label>Position</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>투수</fullName>
+                <default>false</default>
+                <label>투수</label>
+            </value>
+            <value>
+                <fullName>포수</fullName>
+                <default>false</default>
+                <label>포수</label>
+            </value>
+            <value>
+                <fullName>내야수</fullName>
+                <default>false</default>
+                <label>내야수</label>
+            </value>
+            <value>
+                <fullName>외야수</fullName>
+                <default>false</default>
+                <label>외야수</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

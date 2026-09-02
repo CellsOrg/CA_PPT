@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RevenueScheduleType</fullName>
+    <inlineHelpText>이 상품의 매출을 기간에 걸쳐 나눠 인식할지 정합니다. &apos;Divide&apos;로 설정하면 전체 금액을 개월 수만큼 균등하게 나눠 월별 매출로 잡습니다(예: 3개월 전광판 노출).</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+</CustomField>

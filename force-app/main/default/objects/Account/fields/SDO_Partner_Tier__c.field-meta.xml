@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Partner_Tier__c</fullName>
+    <description>파트너의 등급을 나타냅니다. Opportunity가 Closed Won이 될 때 계약 규모 등 기준에 따라 자동으로 산정됩니다.</description>
+    <inlineHelpText>현재 파트너 등급입니다. 계약 성사 시 규모와 조건에 따라 자동 갱신됩니다. (None → Gold → Platinum → Diamond)</inlineHelpText>
+    <label>Tier</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>true</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Gold</fullName>
+                <default>false</default>
+                <label>Gold</label>
+            </value>
+            <value>
+                <fullName>Platinum</fullName>
+                <default>false</default>
+                <label>Platinum</label>
+            </value>
+            <value>
+                <fullName>Diamond</fullName>
+                <default>false</default>
+                <label>Diamond</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

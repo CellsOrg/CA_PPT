@@ -1,0 +1,117 @@
+<style>
+#erd svg.erDiagram .divider path { stroke-opacity: 0.5; }
+#erd svg.erDiagram .row-rect-odd path,
+#erd svg.erDiagram .row-rect-odd rect,
+#erd svg.erDiagram .row-rect-even path,
+#erd svg.erDiagram .row-rect-even rect { stroke: none !important; }
+</style>
+<div id="erd"></div>
+<script type="module">
+import mermaid from 'https://esm.sh/mermaid@11/dist/mermaid.esm.min.mjs';
+const themeMode = document.documentElement.dataset.mode;
+const dark = themeMode ? themeMode === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+await document.fonts.ready;
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'base',
+  fontFamily: '"anthropic-sans", sans-serif',
+  themeVariables: {
+    darkMode: dark,
+    fontSize: '13px',
+    fontFamily: '"anthropic-sans", sans-serif',
+    lineColor: dark ? '#9c9a92' : '#73726c',
+    textColor: dark ? '#c2c0b6' : '#3d3d3a',
+  },
+});
+const src = `erDiagram
+    ENGAGEMENT_SIGNAL__C {
+        picklist Signal_Type__c
+        string Source__c
+        datetime Signal_Date__c
+        string External_ID__c "UQ"
+    }
+    FAN_ACTIVITY_PATTERN__C {
+        number Games_Attended__c
+        percent Attendance_Rate__c
+        number Goods_Purchases__c
+        currency Total_Spend__c
+        date Analyzed_Date__c
+    }
+    FAN_SEGMENT_HISTORY__C {
+        picklist Segment__c
+        datetime Changed_Date__c
+        string Reason__c
+    }
+    RECOMMENDATIONS__C {
+        picklist Recommended_Action__c
+        picklist Status__c
+        string Reason__c
+        textarea Personalized_Message__c
+        datetime Sent_Date__c
+    }
+    BENEFITS__C {
+        picklist Benefit_Type__c
+        picklist Status__c
+        date Issued_Date__c
+        date Used_Date__c
+        date Expiration_Date__c
+        percent Discount_Rate__c
+        currency Min_Purchase_Amount__c
+        string Badge_Label__c
+    }
+    NOTIFICATION_LOG__C {
+        picklist Channel__c
+        textarea Content__c
+        datetime Sent_Date__c
+    }
+    ACCOUNT_FAN {
+        picklist Current_Segment__c
+        picklist Fan_Value_Tier__c
+    }
+    CAMPAIGN_FAN {
+        picklist RecordType
+        text Name
+    }
+    CONTACT_PLAYER {
+        text Uniform_Number__c
+    }
+
+    ACCOUNT_FAN ||--o{ ENGAGEMENT_SIGNAL__C : "Fan L!"
+    CONTACT_PLAYER ||--o{ ENGAGEMENT_SIGNAL__C : "Player L"
+    ACCOUNT_FAN ||--o{ FAN_ACTIVITY_PATTERN__C : "Fan L!"
+    ACCOUNT_FAN ||--o{ FAN_SEGMENT_HISTORY__C : "Fan L!"
+    ACCOUNT_FAN ||--o{ RECOMMENDATIONS__C : "Fan L!"
+    CAMPAIGN_FAN ||--o{ RECOMMENDATIONS__C : "Campaign L"
+    RECOMMENDATIONS__C ||--o{ BENEFITS__C : "추천발급"
+    ACCOUNT_FAN ||--o{ BENEFITS__C : "Fan L!"
+    ACCOUNT_FAN ||--o{ NOTIFICATION_LOG__C : "Fan L!"
+    CAMPAIGN_FAN ||--o{ NOTIFICATION_LOG__C : "Campaign L"
+    CAMPAIGN_FAN ||--o{ CAMPAIGNMEMBER : "표준"
+    ACCOUNT_FAN ||--o{ CAMPAIGNMEMBER : "표준"`;
+const { svg } = await mermaid.render('erd-svg', src);
+document.getElementById('erd').innerHTML = svg;
+
+document.querySelectorAll('#erd svg.erDiagram .node').forEach(node => {
+  const firstPath = node.querySelector('path[d]');
+  if (!firstPath) return;
+  const d = firstPath.getAttribute('d');
+  const nums = d.match(/-?[\d.]+/g)?.map(Number);
+  if (!nums || nums.length < 8) return;
+  const xs = [nums[0], nums[2], nums[4], nums[6]];
+  const ys = [nums[1], nums[3], nums[5], nums[7]];
+  const x = Math.min(...xs), y = Math.min(...ys);
+  const w = Math.max(...xs) - x, h = Math.max(...ys) - y;
+  const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  rect.setAttribute('x', x); rect.setAttribute('y', y);
+  rect.setAttribute('width', w); rect.setAttribute('height', h);
+  rect.setAttribute('rx', '8');
+  for (const a of ['fill', 'stroke', 'stroke-width', 'class', 'style']) {
+    if (firstPath.hasAttribute(a)) rect.setAttribute(a, firstPath.getAttribute(a));
+  }
+  firstPath.replaceWith(rect);
+});
+
+document.querySelectorAll('#erd svg.erDiagram .row-rect-odd path, #erd svg.erDiagram .row-rect-even path').forEach(p => {
+  p.setAttribute('stroke', 'none');
+});
+</script>

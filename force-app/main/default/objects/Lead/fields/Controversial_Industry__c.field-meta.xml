@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Controversial_Industry__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>브랜드 이미지 리스크가 있는 논란 업종 여부. Lead Scoring Risk 감점(-10)에서 사용.</description>
+    <label>Controversial Industry</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Player_Goods_Requires_Related_Player</fullName>
+    <active>true</active>
+    <errorConditionFormula>Is_Player_Goods__c = true &amp;&amp; ISBLANK(Related_Player__c)</errorConditionFormula>
+    <errorMessage>선수 관련 상품은 연결된 선수(Related Player)를 반드시 지정해야 합니다.</errorMessage>
+</ValidationRule>

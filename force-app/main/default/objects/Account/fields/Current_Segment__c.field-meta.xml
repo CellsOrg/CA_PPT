@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Segment__c</fullName>
+    <description>현재 팬의 세그먼트</description>
+    <inlineHelpText>현재 팬의 세그먼트</inlineHelpText>
+    <label>Current Segment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Fan</fullName>
+                <color>#DDDDDD</color>
+                <default>false</default>
+                <label>New Fan</label>
+            </value>
+            <value>
+                <fullName>Active Fan</fullName>
+                <color>#FF6600</color>
+                <default>false</default>
+                <label>Active Fan</label>
+            </value>
+            <value>
+                <fullName>At-Risk Fan</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>At-Risk Fan</label>
+            </value>
+            <value>
+                <fullName>Dormant Fan</fullName>
+                <color>#6666CC</color>
+                <default>false</default>
+                <label>Dormant Fan</label>
+            </value>
+            <value>
+                <fullName>Churned Fan</fullName>
+                <color>#666666</color>
+                <default>false</default>
+                <label>Churned Fan</label>
+            </value>
+            <value>
+                <fullName>Unreachable Fan</fullName>
+                <color>#999999</color>
+                <default>false</default>
+                <label>Unreachable Fan</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

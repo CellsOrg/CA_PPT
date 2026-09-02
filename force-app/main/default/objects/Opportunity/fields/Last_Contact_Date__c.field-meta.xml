@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Contact_Date__c</fullName>
+    <description>The date/time of the most recent qualifying Customer Contact (completed Call, Email, Online Meeting, or Offline Meeting) associated with this Opportunity. Generic Task completion and internal activity do not update this field. Automatically maintained by Flow - not intended for manual edit.</description>
+    <label>Last Contact Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

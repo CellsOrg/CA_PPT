@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Analytics_Demo_Closed_Date__c</fullName>
+    <description>Demo-only synthetic case closure datetime for Service Insights charts that bucket by Case_Closed_Date in Data Cloud. Bulk-loadable when standard Case.ClosedDate is not API-updateable. Map this CRM field to ssot__Case__dlm.ssot__ClosedDate__c (or equivalent DMO closed-date column) via Data Cloud object mapping so Tableau Next SDM timelines spread across weeks.</description>
+    <inlineHelpText>Synthetic closure timeline for SI dashboards. Populate via loader; keep in sync with closed-case cohort intent.</inlineHelpText>
+    <label>SDO Analytics Demo Closed Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

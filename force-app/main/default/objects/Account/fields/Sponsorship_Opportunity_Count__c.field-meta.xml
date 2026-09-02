@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sponsorship_Opportunity_Count__c</fullName>
+    <description>이 계정에 연결된 기회(Opportunity) 건수. Flow가 자동으로 집계합니다.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>이 스폰서 계정과 연결된 스폰서십 기회의 개수입니다.</inlineHelpText>
+    <label>스폰서십 기회 건수</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

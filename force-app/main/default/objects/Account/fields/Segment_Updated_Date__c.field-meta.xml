@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Updated_Date__c</fullName>
+    <description>팬 세그먼트 변경일</description>
+    <inlineHelpText>팬 세그먼트 변경일</inlineHelpText>
+    <label>Segment Updated Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

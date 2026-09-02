@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slides.css">
+<style>
+  .hero{margin-top:30px}
+  .ctx{display:flex;gap:12px;margin-top:24px;flex-wrap:nowrap}
+  .ctx .pill.up{background:var(--sky);border-color:var(--sky-line);color:var(--blue-ink)}
+  .ctx .pill.down{background:var(--orange-soft);border-color:#F6D6B8;color:var(--orange-ink)}
+  .ctx .pill svg{stroke:currentColor}
+
+  .pains{display:flex;gap:24px;margin-top:26px;height:372px}
+  .pain{flex:1;padding:40px 38px;display:flex;flex-direction:column;justify-content:center;position:relative;
+        overflow:hidden;border-left:5px solid var(--orange)}
+  .pain .pn{position:absolute;top:24px;right:30px;font-size:82px;font-weight:900;color:#EDF2F9;line-height:1;letter-spacing:-.02em}
+  .pain .picon{width:50px;height:50px;padding:12px;border-radius:13px;background:var(--sky);color:var(--blue);position:relative;z-index:1}
+  .pain .pt{font-size:32px;font-weight:800;color:var(--navy);line-height:1.25;margin-top:20px;position:relative;z-index:1}
+  .pain .pg{font-size:16px;color:var(--muted);font-weight:500;line-height:1.55;margin-top:22px;padding-top:18px;
+        border-top:1px solid var(--line);position:relative;z-index:1}
+
+  .bottom{display:flex;align-items:stretch;gap:28px;margin-top:54px}
+  .bwrap{flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px}
+  .phase{display:flex;flex-direction:column;gap:8px;font-size:16px;color:var(--navy-2);font-weight:600}
+  .phase b{display:inline-block;min-width:78px;color:var(--orange-ink);font-weight:800}
+  .bottom .callout{width:600px;display:flex;align-items:center}
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="head">
+    <div>
+      <div class="kicker">Project Overview · 프로젝트 개요</div>
+      <div class="title">왜 <span class="o">Cloud Alpacas</span>인가?</div>
+    </div>
+    <div class="wordmark">
+      <svg viewBox="0 0 24 24"><path d="M7 18h9a4 4 0 0 0 .5-7.97A6 6 0 0 0 5 9.5 3.5 3.5 0 0 0 7 18Z" fill="#1B6FD1"/></svg>
+      Cloud Alpacas
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="msg">팬은 늘어나는데, <span class="hl">구단의 매출은 함께 성장하고 있는가?</span></div>
+    <div class="sub" style="margin-top:12px">Cellsforce는 가상 구단 Cloud Alpacas의 FRM Team으로서, 팬 데이터를 하나로 연결하는 Salesforce Customer 360을 설계·구현한다.</div>
+  </div>
+
+  <div class="ctx">
+    <span class="pill up"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><path d="M12 19V5M12 5l-6 6M12 5l6 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>팬 수 증가</span>
+    <span class="pill down"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><path d="M12 5v14M12 19l-6-6M12 19l6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>구단 재정 악화</span>
+    <span class="pill">흩어진 팬 데이터</span>
+    <span class="pill">일괄적인 마케팅</span>
+    <span class="pill">팬덤과 매출의 단절</span>
+  </div>
+
+  <div class="pains">
+    <div class="pain card">
+      <span class="pn">01</span>
+      <svg class="picon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l18 18M10.6 5.1A9.8 9.8 0 0 1 12 5c6 0 10 7 10 7a17 17 0 0 1-3 3.6M6.6 6.6C3.9 8.3 2 12 2 12s4 7 10 7a9.8 9.8 0 0 0 4.3-1M9.9 9.9a3 3 0 0 0 4.2 4.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="pt">팬을 한눈에<br>볼 수 없다</div>
+      <div class="pg">티켓·굿즈·멤버십·앱·문의 데이터가 서로 다른 시스템에 흩어져 있다.</div>
+    </div>
+    <div class="pain card">
+      <span class="pn">02</span>
+      <svg class="picon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="pt">데이터는 많지만<br>Action이 없다</div>
+      <div class="pg">세분화도 타이밍도 없이 모든 팬에게 같은 이벤트·쿠폰·메시지를 보낸다.</div>
+    </div>
+    <div class="pain card">
+      <span class="pn">03</span>
+      <svg class="picon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 17H7A5 5 0 0 1 7 7h2M15 7h2a5 5 0 0 1 3.5 8.5M8 12h4M3 3l18 18" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="pt">팬덤의 가치를<br>매출로 연결할 수 없다</div>
+      <div class="pg">어떤 기업이 우리 팬덤에 광고비를 지불할지 판단할 근거가 없다.</div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="bwrap">
+      <div class="phase">
+        <span><b>Phase 1</b> 신규 팬을 충성 팬으로 · Fan Lifetime Value 향상</span>
+        <span><b>Phase 2</b> 팬덤의 광고 가치를 스폰서십 매출로 연결</span>
+      </div>
+      <div class="flow">
+        <span class="node">Fan 360</span>
+        <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="node">Fan Insight</span>
+        <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="node navy">Sponsorship Sales</span>
+      </div>
+    </div>
+    <div class="callout">외부 환경에 흔들리지 않는<br>지속 가능한 매출 엔진</div>
+  </div>
+
+  <div class="foot"><span><b>Cloud Alpacas</b> · Fan Relationship Management</span><span>01 / 04</span></div>
+</div>
+</body>
+</html>

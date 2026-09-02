@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Sales_Lead_Total__c</fullName>
+    <description>B2B Sponsorship Lead Scoring 100점 체계 합산: 업종 적합도(25)+지역 연고성(10)+스폰서십 경험(10)+관심도(12)+유입경로(8)+예산(5)+결정권자(5)+프로젝트 구체성(5)+계약 타임프레임(20).</description>
+    <externalId>false</externalId>
+    <formula>Score1__c + Score2__c + Score3__c + Score4__c + Score_Industry__c + Score_Region__c + Score_Sponsorship__c + Score_Interest__c + Score_LeadSource__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

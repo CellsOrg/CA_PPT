@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transfer_Status__c</fullName>
+    <description>티켓의 현재 양도 상태를 기록</description>
+    <inlineHelpText>티켓이 다른 팬에게 양도되었는지 선택</inlineHelpText>
+    <label>Transfer Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Transferred</fullName>
+                <default>false</default>
+                <label>Not Transferred</label>
+            </value>
+            <value>
+                <fullName>Transferred</fullName>
+                <default>false</default>
+                <label>Transferred</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

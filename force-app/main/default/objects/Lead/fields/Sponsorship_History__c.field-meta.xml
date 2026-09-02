@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sponsorship_History__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>기존 스폰서십/제휴 경험 여부. Lead Scoring 적합도 항목에서 사용 예정.</description>
+    <label>Sponsorship History</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,93 @@
+<style>
+#erd svg.erDiagram .divider path { stroke-opacity: 0.5; }
+#erd svg.erDiagram .row-rect-odd path,
+#erd svg.erDiagram .row-rect-odd rect,
+#erd svg.erDiagram .row-rect-even path,
+#erd svg.erDiagram .row-rect-even rect { stroke: none !important; }
+</style>
+<div id="erd"></div>
+<script type="module">
+import mermaid from 'https://esm.sh/mermaid@11/dist/mermaid.esm.min.mjs';
+const themeMode = document.documentElement.dataset.mode;
+const dark = themeMode ? themeMode === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+await document.fonts.ready;
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'base',
+  fontFamily: '"anthropic-sans", sans-serif',
+  themeVariables: {
+    darkMode: dark,
+    fontSize: '13px',
+    fontFamily: '"anthropic-sans", sans-serif',
+    lineColor: dark ? '#9c9a92' : '#73726c',
+    textColor: dark ? '#c2c0b6' : '#3d3d3a',
+  },
+});
+const src = `erDiagram
+    ACCOUNT ||--o{ ORDER : "구매"
+    ACCOUNT ||--o{ OPPORTUNITY : "스폰서십 딜"
+    ACCOUNT ||--o{ CAMPAIGNMEMBER : "캠페인 대상"
+    ACCOUNT ||--o| ATTENDANCE_RECORD__C : "누적 관람"
+    ACCOUNT ||--o{ ADMISSION__C : "입장"
+    ACCOUNT ||--o{ ENGAGEMENT_SIGNAL__C : "관심 신호"
+    ACCOUNT ||--o{ FAN_ACTIVITY_PATTERN__C : "활동 패턴"
+    ACCOUNT ||--o{ FAN_SEGMENT_HISTORY__C : "세그먼트 이력"
+    ACCOUNT ||--o{ RECOMMENDATIONS__C : "추천 대상"
+    ACCOUNT ||--o{ BENEFITS__C : "혜택 수령"
+    ACCOUNT ||--o{ NOTIFICATION_LOG__C : "안내 수신"
+    ACCOUNT ||--o{ DART_CORP_MAPPING__C : "논리적 매칭"
+    CONTACT ||--o{ ACCOUNT : "Favorite Player"
+    CONTACT ||--o{ ENGAGEMENT_SIGNAL__C : "Player"
+    CONTACT ||--o{ PRODUCT2 : "Related Player"
+
+    SEASON__C ||--|{ GAME__C : "MD"
+    SEASON__C ||--o{ FAN_ACTIVITY_PATTERN__C : "시즌별"
+    GAME__C ||--o{ ORDER : "티켓 경기"
+    GAME__C ||--o{ ADMISSION__C : "경기 입장"
+    ATTENDANCE_RECORD__C ||--|{ ADMISSION__C : "MD"
+    ORDER ||--|{ ORDERITEM : "MD"
+    ORDER ||--o{ CASE : "Related Order"
+    ORDERITEM ||--o{ ADMISSION__C : "티켓 입장"
+    PRODUCT2 ||--o{ PRICEBOOKENTRY : "가격"
+    PRICEBOOKENTRY ||--o{ ORDERITEM : "적용"
+
+    RECOMMENDATIONS__C ||--o{ BENEFITS__C : "추천→발급"
+    CAMPAIGN ||--o{ RECOMMENDATIONS__C : "Campaign"
+    CAMPAIGN ||--o{ NOTIFICATION_LOG__C : "캠페인 발송"
+    CAMPAIGN ||--o{ CAMPAIGNMEMBER : "대상 목록"
+    CAMPAIGN ||--|{ CAMPAIGN_DELIVERABLE__C : "MD"
+
+    OPPORTUNITY ||--|{ OPPORTUNITYLINEITEM : "MD"
+    PRODUCT2 ||--o{ OPPORTUNITYLINEITEM : "Sponsorship Package"
+    OPPORTUNITY ||--o{ INTERACTION_INTELLIGENCE__C : "Opportunity"
+    INTERACTION_INTELLIGENCE__C ||--|{ INTERACTION_SIGNAL__C : "MD"
+    USER ||--o{ SALES_BRIEFING__C : "User"
+    LEAD ||..|| ACCOUNT : "convert"
+    LEAD ||..|| OPPORTUNITY : "convert"`;
+const { svg } = await mermaid.render('erd-svg', src);
+document.getElementById('erd').innerHTML = svg;
+
+document.querySelectorAll('#erd svg.erDiagram .node').forEach(node => {
+  const firstPath = node.querySelector('path[d]');
+  if (!firstPath) return;
+  const d = firstPath.getAttribute('d');
+  const nums = d.match(/-?[\d.]+/g)?.map(Number);
+  if (!nums || nums.length < 8) return;
+  const xs = [nums[0], nums[2], nums[4], nums[6]];
+  const ys = [nums[1], nums[3], nums[5], nums[7]];
+  const x = Math.min(...xs), y = Math.min(...ys);
+  const w = Math.max(...xs) - x, h = Math.max(...ys) - y;
+  const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  rect.setAttribute('x', x); rect.setAttribute('y', y);
+  rect.setAttribute('width', w); rect.setAttribute('height', h);
+  rect.setAttribute('rx', '8');
+  for (const a of ['fill', 'stroke', 'stroke-width', 'class', 'style']) {
+    if (firstPath.hasAttribute(a)) rect.setAttribute(a, firstPath.getAttribute(a));
+  }
+  firstPath.replaceWith(rect);
+});
+
+document.querySelectorAll('#erd svg.erDiagram .row-rect-odd path, #erd svg.erDiagram .row-rect-even path').forEach(p => {
+  p.setAttribute('stroke', 'none');
+});
+</script>

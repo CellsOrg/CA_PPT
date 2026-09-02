@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>스폰서십 롤업 필드(Total Sponsorship Value, Sponsorship Opportunities)에 대한 읽기 권한.</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Sponsor_Tier__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Sponsorship_Opportunity_Count__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Total_Sponsorship_Value__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sponsorship Rollup Access</label>
+</PermissionSet>

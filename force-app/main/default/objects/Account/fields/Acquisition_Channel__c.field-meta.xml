@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acquisition_Channel__c</fullName>
+    <description>유입 경로</description>
+    <inlineHelpText>팬의 유입 경로를 체크하기</inlineHelpText>
+    <label>Acquisition Channel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SNS</fullName>
+                <default>false</default>
+                <label>SNS</label>
+            </value>
+            <value>
+                <fullName>지인 추천</fullName>
+                <default>false</default>
+                <label>지인 추천</label>
+            </value>
+            <value>
+                <fullName>검색</fullName>
+                <default>false</default>
+                <label>검색</label>
+            </value>
+            <value>
+                <fullName>오프라인</fullName>
+                <default>false</default>
+                <label>오프라인</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

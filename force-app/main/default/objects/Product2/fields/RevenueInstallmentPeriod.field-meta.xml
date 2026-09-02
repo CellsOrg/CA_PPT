@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RevenueInstallmentPeriod</fullName>
+    <inlineHelpText>매출을 나눌 주기입니다. 스폰서십 상품은 보통 &apos;Monthly&apos;(월별)로 관리합니다.</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+</CustomField>

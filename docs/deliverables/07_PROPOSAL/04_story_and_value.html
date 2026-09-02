@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slides.css">
+<style>
+  .ribbon{margin-top:16px;display:flex;align-items:center;gap:16px}
+  .ribbon .rl{font-size:14px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+  .ribbon .bar{flex:1;display:flex;align-items:stretch;gap:0;background:var(--navy);border-radius:14px;overflow:hidden;height:58px}
+  .ribbon .seg{flex:1;display:flex;align-items:center;justify-content:center;padding:0 10px;font-size:20px;font-weight:800;color:#fff}
+  .ribbon .seg.mid{background:var(--orange)}
+  .ribbon .seg .ar{opacity:.5;margin:0 4px}
+
+  .mid{flex:1;display:flex;flex-direction:column;justify-content:center;gap:50px;margin-top:24px}
+  .tl{position:relative;display:flex;align-items:stretch;gap:10px}
+  .tl::before{content:"";position:absolute;left:30px;right:30px;top:98px;height:3px;background:#D8E2EC;z-index:0}
+  .zone{border-radius:18px;padding:18px 12px 26px;position:relative;z-index:1}
+  .zone.b2c{background:var(--sky);flex:3}
+  .zone.b2b{background:var(--green-soft);flex:5}
+  .zlab{font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;text-align:center;margin-bottom:14px}
+  .b2c .zlab{color:var(--blue-ink)}
+  .b2b .zlab{color:var(--green-ink)}
+  .steps{display:flex}
+  .step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 6px}
+  .dot{width:60px;height:60px;border-radius:50%;background:#fff;border:3px solid var(--blue);
+       display:flex;align-items:center;justify-content:center;color:var(--blue);position:relative;z-index:2}
+  .dot svg{width:27px;height:27px}
+  .b2b .dot{border-color:var(--green);color:var(--green)}
+  .step .nm{font-size:16px;font-weight:800;color:var(--navy);margin-top:14px;letter-spacing:.02em}
+  .step .kw{font-size:14px;line-height:1.6;color:var(--muted);font-weight:600;margin-top:8px}
+
+  .bridge{flex:1.15;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:3}
+  .bridge .bcard{background:var(--orange);color:#fff;border-radius:16px;padding:20px 16px;text-align:center;
+       box-shadow:0 8px 18px rgba(236,122,28,.24);width:100%}
+  .bridge .bcard svg{width:28px;height:28px;color:#fff}
+  .bridge .bcard .nm{font-size:16px;font-weight:900;letter-spacing:.06em;margin-top:8px}
+  .bridge .bcard .kw{font-size:13.5px;font-weight:700;opacity:.95;margin-top:5px}
+
+  .vals{display:flex;gap:22px;height:180px}
+  .val{flex:1;border-radius:18px;padding:26px 30px;border:1px solid var(--line);box-shadow:0 2px 12px rgba(15,40,70,.05);
+       display:flex;flex-direction:column;justify-content:center;border-top:5px solid var(--orange)}
+  .val .vh{display:flex;align-items:center;gap:13px}
+  .val .vi{width:44px;height:44px;border-radius:11px;background:var(--orange-soft);color:var(--orange-ink);
+       display:flex;align-items:center;justify-content:center;flex:none}
+  .val .vi svg{width:24px;height:24px}
+  .val h3{font-size:22px;font-weight:800;color:var(--navy);line-height:1.25}
+  .val p{font-size:15.5px;color:var(--muted);font-weight:500;line-height:1.55;margin-top:14px}
+
+  .tag{text-align:center;font-size:19px;font-weight:800;color:var(--navy-2)}
+  .tag .s{color:var(--orange)}
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="head">
+    <div>
+      <div class="kicker">Scenario &amp; Value · 대표 시나리오 / 기대효과</div>
+      <div class="title">From Fan Action to <span class="o">Sponsorship Revenue</span></div>
+    </div>
+    <div class="wordmark">
+      <svg viewBox="0 0 24 24"><path d="M7 18h9a4 4 0 0 0 .5-7.97A6 6 0 0 0 5 9.5 3.5 3.5 0 0 0 7 18Z" fill="#1B6FD1"/></svg>
+      Cloud Alpacas
+    </div>
+  </div>
+
+  <div class="ribbon">
+    <span class="rl">가장 강조하는 연결</span>
+    <span class="bar">
+      <span class="seg">Fan Data</span>
+      <span class="seg mid">Fan Insight</span>
+      <span class="seg">Sponsorship Sales</span>
+    </span>
+  </div>
+
+  <div class="mid">
+  <div class="tl">
+    <div class="zone b2c">
+      <div class="zlab">B2C · 팬을 이해한다</div>
+      <div class="steps">
+        <div class="step">
+          <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><path d="M14 14h6M14 18h3M20 14v6" stroke-linecap="round"/></svg></div>
+          <div class="nm">FAN</div>
+          <div class="kw">QR 참여</div>
+        </div>
+        <div class="step">
+          <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-5.5 7-5.5s7 2 7 5.5" stroke-linecap="round"/></svg></div>
+          <div class="nm">김매니저</div>
+          <div class="kw">Fan 360<br>Recommendation<br>Personalization</div>
+        </div>
+        <div class="step">
+          <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19V10M10 19V5M15 19v-6M20 19V9" stroke-linecap="round"/></svg></div>
+          <div class="nm">FAN INSIGHT</div>
+          <div class="kw">20·30대 여성<br>Beauty Interest</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bridge">
+      <div class="bcard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v10M12 3v14M16 7v10M20 11H10M14 17H4M18 13h2M4 7h2" stroke-linecap="round"/></svg>
+        <div class="nm">SLACK</div>
+        <div class="kw">B2C → B2B 전달</div>
+      </div>
+    </div>
+
+    <div class="zone b2b">
+      <div class="zlab">B2B · 기업을 찾아 계약으로</div>
+      <div class="steps">
+        <div class="step">
+          <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-5.5 7-5.5s7 2 7 5.5" stroke-linecap="round"/></svg></div>
+          <div class="nm">이매니저</div>
+          <div class="kw">기업 후보 발굴<br>Fan Fit + Lead Score</div>
+        </div>
+        <div class="step">
+          <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h18l-7 8v6l-4 2v-8L3 5Z" stroke-linejoin="round"/></svg></div>
+          <div class="nm">SALES</div>
+          <div class="kw">Lead<br>Account / Contact<br>Opportunity</div>
+        </div>
+        <div class="step">
+          <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3Z" stroke-linejoin="round"/></svg></div>
+          <div class="nm">AI SALES</div>
+          <div class="kw">Stage Guidance<br>Meeting Activity<br>Opportunity Agent</div>
+        </div>
+        <div class="step">
+          <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3h7l4 4v14H7zM14 3v5h5M9.5 13.5l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="nm">CONTRACT</div>
+          <div class="kw">Sponsorship<br>Quote<br>Closed Won</div>
+        </div>
+        <div class="step">
+          <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12a8 8 0 0 1 13.5-5.8L20 8M20 3v5h-5M20 12a8 8 0 0 1-13.5 5.8L4 16M4 21v-5h5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="nm">GROWTH</div>
+          <div class="kw">Renewal<br>Upsell</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="vals">
+    <div class="val">
+      <div class="vh">
+        <span class="vi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 8.6a5 5 0 0 0-8.8-3.2A5 5 0 0 0 3.2 8.6C3.2 14 12 20 12 20s8.8-6 8.8-11.4Z" stroke-linejoin="round"/></svg></span>
+        <h3>Fan Lifetime Value 향상</h3>
+      </div>
+      <p>분석에서 끝나지 않고 실제 개인화 Action까지 이어진다.</p>
+    </div>
+    <div class="val">
+      <div class="vh">
+        <span class="vi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.4-9.3-9A5.4 5.4 0 0 1 12 7a5.4 5.4 0 0 1 9.3 5C19 16.6 12 21 12 21Z" stroke-linejoin="round"/><path d="M8 12h2l1.5 3 2-6 1.5 3h2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>팬 로열티 및 개인화 경험 강화</h3>
+      </div>
+      <p>팬 상태에 맞는 Next Best Action을 적시에 실행한다.</p>
+    </div>
+    <div class="val">
+      <div class="vh">
+        <span class="vi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5M4 19h16M8 16V9M13 16V6M18 16v-4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>팬덤 기반 Sponsorship Revenue 확대</h3>
+      </div>
+      <p>팬덤의 특성이 B2B 매출 기회의 근거가 된다.</p>
+    </div>
+  </div>
+
+  <div class="tag">팬을 이해하고 <span class="s">→</span> 기업을 찾고 <span class="s">→</span> 계약으로 연결한다</div>
+  </div>
+
+  <div class="foot"><span><b>Cloud Alpacas</b> · Fan Relationship Management</span><span>04 / 04</span></div>
+</div>
+</body>
+</html>

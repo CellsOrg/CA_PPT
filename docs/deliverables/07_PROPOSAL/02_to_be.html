@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slides.css">
+<style>
+  .hero{margin-top:26px}
+  .cmp{margin-top:22px;flex:1;display:flex;flex-direction:column}
+  .cmp-head{display:grid;grid-template-columns:1fr 64px 1fr;gap:0 20px;margin-bottom:14px}
+  .lab{font-size:16px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding-bottom:10px}
+  .lab.as{color:var(--muted);border-bottom:3px solid var(--line)}
+  .lab.to{color:var(--blue-ink);border-bottom:3px solid var(--blue)}
+  .rows{display:flex;flex-direction:column;gap:12px;flex:1}
+  .row{display:grid;grid-template-columns:1fr 64px 1fr;gap:0 20px;align-items:stretch;flex:1}
+  .side{display:flex;align-items:center;padding:0 24px;border-radius:12px;font-size:19px;line-height:1.35;font-weight:600}
+  .side.as{background:var(--panel);color:var(--muted)}
+  .side.to{background:var(--sky);color:var(--navy);border:1px solid var(--sky-line)}
+  .side.to b{color:var(--blue-ink);font-weight:800}
+  .mid{display:flex;align-items:center;justify-content:center;color:var(--orange)}
+  .mid svg{width:30px;height:30px}
+
+  .rail{margin-top:22px;background:var(--navy);border-radius:20px;padding:24px 34px;display:flex;
+        align-items:center;justify-content:space-between;gap:10px}
+  .rn{display:flex;flex-direction:column;align-items:center;gap:6px;color:#fff;text-align:center}
+  .rn .t{font-size:22px;font-weight:800}
+  .rn .c{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.6}
+  .rn.rev .t{color:#FFD9B4}
+  .rail .sep svg{width:26px;height:26px;color:#6E8CB0}
+  .rail-note{margin-top:12px;text-align:center;font-size:16px;color:var(--muted);font-weight:600}
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="head">
+    <div>
+      <div class="kicker">To-Be · 프로젝트 목표</div>
+      <div class="title">From Data Fragmentation to <span class="o">Revenue Engine</span></div>
+    </div>
+    <div class="wordmark">
+      <svg viewBox="0 0 24 24"><path d="M7 18h9a4 4 0 0 0 .5-7.97A6 6 0 0 0 5 9.5 3.5 3.5 0 0 0 7 18Z" fill="#1B6FD1"/></svg>
+      Cloud Alpacas
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="msg">감(感)에서 데이터로, <span class="hl">분석에서 Action과 Revenue로</span></div>
+  </div>
+
+  <div class="cmp">
+    <div class="cmp-head">
+      <div class="lab as">As-Is</div><div></div><div class="lab to">To-Be</div>
+    </div>
+    <div class="rows">
+      <div class="row">
+        <div class="side as">흩어진 팬 데이터</div>
+        <div class="mid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="side to"><span><b>Fan 360</b> — 한 화면에서 팬을 본다</span></div>
+      </div>
+      <div class="row">
+        <div class="side as">감각·경험 중심 팬 관리</div>
+        <div class="mid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="side to"><span>데이터 기반 <b>Fan Insight</b></span></div>
+      </div>
+      <div class="row">
+        <div class="side as">모두에게 같은 메시지 (일괄 마케팅)</div>
+        <div class="mid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="side to"><span>팬 상태별 개인화 <b>Recommendation / Next Best Action</b></span></div>
+      </div>
+      <div class="row">
+        <div class="side as">팬 데이터와 영업 데이터의 단절</div>
+        <div class="mid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="side to"><span><b>Fan Insight 기반 Sponsorship Sales</b></span></div>
+      </div>
+      <div class="row">
+        <div class="side as">감·인맥으로 스폰서 후보 선정</div>
+        <div class="mid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="side to"><span>팬덤 광고 가치 기반 <b>기업 발굴 + Pipeline</b></span></div>
+      </div>
+      <div class="row">
+        <div class="side as">미팅 후 수기 정리, 판단 누락</div>
+        <div class="mid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="side to"><span>대화가 자동으로 <b>영업 데이터</b>가 된다</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail">
+    <div class="rn"><span class="c">B2C</span><span class="t">Fan Activity</span></div>
+    <span class="sep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <div class="rn"><span class="c">Insight</span><span class="t">Fan 360 Insight</span></div>
+    <span class="sep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <div class="rn"><span class="c">B2B</span><span class="t">Sponsorship Decision</span></div>
+    <span class="sep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <div class="rn rev"><span class="c">Result</span><span class="t">Revenue</span></div>
+  </div>
+  <div class="rail-note">B2C와 B2B는 서로 다른 프로젝트가 아니라 하나의 연결된 흐름이다</div>
+
+  <div class="foot"><span><b>Cloud Alpacas</b> · Fan Relationship Management</span><span>02 / 04</span></div>
+</div>
+</body>
+</html>

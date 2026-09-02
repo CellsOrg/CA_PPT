@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Score_Interest__c</fullName>
+    <description>관심도 점수 (12점 만점). pi__score__c(Account Engagement Score) 구간 환산.</description>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(pi__score__c), 0,
+IF(pi__score__c &gt;= 100, 12,
+IF(pi__score__c &gt;= 50, 8,
+IF(pi__score__c &gt;= 20, 4,
+IF(pi__score__c &gt;= 1, 2, 0)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Interest Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

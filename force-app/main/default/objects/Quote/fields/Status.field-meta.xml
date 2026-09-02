@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status</fullName>
+    <inlineHelpText>이 견적서가 지금 어느 단계인지 나타냅니다. 새로 작성하면 Draft이고, 검토·승인을 거쳐 상대방에게 전달(Presented)한 뒤 최종적으로 Accepted 또는 Rejected로 마무리됩니다.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+</CustomField>

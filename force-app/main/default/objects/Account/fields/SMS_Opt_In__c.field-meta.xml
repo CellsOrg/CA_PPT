@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SMS_Opt_In__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SMS 마케팅 수신 동의 여부</description>
+    <inlineHelpText>SMS 마케팅 수신 동의 여부</inlineHelpText>
+    <label>SMS Opt-In</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

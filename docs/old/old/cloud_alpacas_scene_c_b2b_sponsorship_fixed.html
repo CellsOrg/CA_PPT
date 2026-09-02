@@ -1,0 +1,136 @@
+<style>
+#erd svg.erDiagram .divider path { stroke-opacity: 0.5; }
+#erd svg.erDiagram .row-rect-odd path,
+#erd svg.erDiagram .row-rect-odd rect,
+#erd svg.erDiagram .row-rect-even path,
+#erd svg.erDiagram .row-rect-even rect { stroke: none !important; }
+</style>
+<div id="erd"></div>
+<script type="module">
+import mermaid from 'https://esm.sh/mermaid@11/dist/mermaid.esm.min.mjs';
+const themeMode = document.documentElement.dataset.mode;
+const dark = themeMode ? themeMode === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+await document.fonts.ready;
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'base',
+  fontFamily: '"anthropic-sans", sans-serif',
+  themeVariables: {
+    darkMode: dark,
+    fontSize: '13px',
+    fontFamily: '"anthropic-sans", sans-serif',
+    lineColor: dark ? '#9c9a92' : '#73726c',
+    textColor: dark ? '#c2c0b6' : '#3d3d3a',
+  },
+});
+const src = `erDiagram
+    DART_CORP_MAPPING__C {
+        text Corp_Code__c
+        text Corp_Name__c
+        text Corp_Name_Eng__c
+        text Stock_Code__c
+    }
+    ACCOUNT_BUSINESS {
+        text Business_Reg_No__c
+        text Corp_Name_Eng__c
+        picklist Market_Type__c
+        picklist Sponsor_Tier__c
+        picklist DART_Match_Status__c
+        percent Match_Confidence__c
+        currency Total_Sponsorship_Value__c
+        number Sponsorship_Opportunity_Count__c
+    }
+    LEAD {
+        number Lead_Score__c
+        number Final_Lead_Score__c
+        percent Segment_Match__c
+        picklist Target_Segment__c
+        textarea AI_Lead_Summary__c
+    }
+    OPPORTUNITY {
+        picklist Sponsorship_Interest_Level__c
+        currency Client_Budget__c
+        number Target_Start_Season__c
+        datetime Last_Contact_Date__c
+        date Contract_Start_Date__c
+        date Contract_End_Date__c
+        longtext Expected_Benefit_Short_Term__c
+    }
+    INTERACTION_INTELLIGENCE__C {
+        textarea Summary__c
+        textarea Key_Decision__c
+        picklist Customer_Reaction__c
+        picklist Source_Type__c
+        string Source_Record_Id__c "UQ"
+    }
+    INTERACTION_SIGNAL__C {
+        picklist Signal_Category__c
+        picklist Signal_Type__c
+        picklist Direction__c
+        picklist Confidence__c
+    }
+    CAMPAIGN_SPONSORSHIP {
+        longtext Performance_Summary__c
+        rollup Total_Deliverable_Weight__c
+        rollup Completed_Deliverable_Weight__c
+    }
+    CAMPAIGN_DELIVERABLE__C {
+        picklist Status__c
+        percent Weight__c
+        date Due_Date__c
+        date Completed_Date__c
+        picklist Blocked_Reason__c
+    }
+    SALES_BRIEFING__C {
+        date Briefing_Date__c
+        string Briefing_Key__c "UQ"
+        textarea Briefing_Text__c
+    }
+    PRM_REVENUE_TARGET__C {
+        number Target_Amount__c
+    }
+    CONTACT_PARTNER {
+        text Name
+    }
+    PRODUCT2_SPONSORSHIP {
+        picklist Category__c
+    }
+
+    ACCOUNT_BUSINESS ||--o{ DART_CORP_MAPPING__C : "논리적매칭 FK없음"
+    LEAD ||..|| ACCOUNT_BUSINESS : "convert"
+    LEAD ||..|| CONTACT_PARTNER : "convert"
+    LEAD ||..|| OPPORTUNITY : "convert"
+    ACCOUNT_BUSINESS ||--o{ OPPORTUNITY : "표준"
+    OPPORTUNITY ||--|{ OPPORTUNITYLINEITEM : "MD 표준"
+    PRODUCT2_SPONSORSHIP ||--o{ OPPORTUNITYLINEITEM : "표준"
+    OPPORTUNITY ||--o{ INTERACTION_INTELLIGENCE__C : "Opportunity L"
+    INTERACTION_INTELLIGENCE__C ||--|{ INTERACTION_SIGNAL__C : "MD"
+    CAMPAIGN_SPONSORSHIP ||--|{ CAMPAIGN_DELIVERABLE__C : "MD"
+    USER ||--o{ SALES_BRIEFING__C : "User L"`;
+const { svg } = await mermaid.render('erd-svg', src);
+document.getElementById('erd').innerHTML = svg;
+
+document.querySelectorAll('#erd svg.erDiagram .node').forEach(node => {
+  const firstPath = node.querySelector('path[d]');
+  if (!firstPath) return;
+  const d = firstPath.getAttribute('d');
+  const nums = d.match(/-?[\d.]+/g)?.map(Number);
+  if (!nums || nums.length < 8) return;
+  const xs = [nums[0], nums[2], nums[4], nums[6]];
+  const ys = [nums[1], nums[3], nums[5], nums[7]];
+  const x = Math.min(...xs), y = Math.min(...ys);
+  const w = Math.max(...xs) - x, h = Math.max(...ys) - y;
+  const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  rect.setAttribute('x', x); rect.setAttribute('y', y);
+  rect.setAttribute('width', w); rect.setAttribute('height', h);
+  rect.setAttribute('rx', '8');
+  for (const a of ['fill', 'stroke', 'stroke-width', 'class', 'style']) {
+    if (firstPath.hasAttribute(a)) rect.setAttribute(a, firstPath.getAttribute(a));
+  }
+  firstPath.replaceWith(rect);
+});
+
+document.querySelectorAll('#erd svg.erDiagram .row-rect-odd path, #erd svg.erDiagram .row-rect-even path').forEach(p => {
+  p.setAttribute('stroke', 'none');
+});
+</script>

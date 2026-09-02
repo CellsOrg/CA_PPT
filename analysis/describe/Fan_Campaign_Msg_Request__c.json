@@ -1,0 +1,16 @@
+{
+  "name": "NOT_FOUND",
+  "message": "The requested resource does not exist",
+  "exitCode": 1,
+  "context": "SObjectDescribe",
+  "data": {
+    "errorCode": "NOT_FOUND",
+    "message": "The requested resource does not exist"
+  },
+  "stack": "NOT_FOUND: The requested resource does not exist\n    at SfCommandError.from (file:///Users/sarabang/.local/share/sf/client/2.147.7-88afb14/node_modules/@salesforce/sf-plugins-core/lib/SfCommandError.js:48:16)\n    at SObjectDescribe.catch (file:///Users/sarabang/.local/share/sf/client/2.147.7-88afb14/node_modules/@salesforce/sf-plugins-core/lib/sfCommand.js:332:47)\n    at SObjectDescribe._run (/Users/sarabang/.local/share/sf/client/2.147.7-88afb14/node_modules/@oclif/core/lib/command.js:187:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async Config.runCommand (/Users/sarabang/.local/share/sf/client/2.147.7-88afb14/node_modules/@oclif/core/lib/config/config.js:422:25)\n    at async run (/Users/sarabang/.local/share/sf/client/2.147.7-88afb14/node_modules/@oclif/core/lib/main.js:97:16)\n    at async file:///Users/sarabang/.local/share/sf/client/2.147.7-88afb14/bin/run.js:15:1",
+  "cause": "NOT_FOUND: The requested resource does not exist\n    at HttpApi.getError (/Users/sarabang/.local/share/sf/client/2.147.7-88afb14/node_modules/@jsforce/jsforce-node/lib/http-api.js:315:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async /Users/sarabang/.local/share/sf/client/2.147.7-88afb14/node_modules/@jsforce/jsforce-node/lib/http-api.js:127:33\n    at async Connection.describe (/Users/sarabang/.local/share/sf/client/2.147.7-88afb14/node_modules/@jsforce/jsforce-node/lib/connection.js:1074:22)\n    at async executeFetch (/Users/sarabang/.local/share/sf/client/2.147.7-88afb14/node_modules/@jsforce/jsforce-node/lib/cache.js:111:36)\n    at async SObjectDescribe.run (file:///Users/sarabang/.local/share/sf/client/2.147.7-88afb14/node_modules/@salesforce/plugin-schema/lib/commands/sobject/describe.js:47:15)\n    at async SObjectDescribe._run (/Users/sarabang/.local/share/sf/client/2.147.7-88afb14/node_modules/@oclif/core/lib/command.js:183:22)\n    at async Config.runCommand (/Users/sarabang/.local/share/sf/client/2.147.7-88afb14/node_modules/@oclif/core/lib/config/config.js:422:25)\n    at async run (/Users/sarabang/.local/share/sf/client/2.147.7-88afb14/node_modules/@oclif/core/lib/main.js:97:16)\n    at async file:///Users/sarabang/.local/share/sf/client/2.147.7-88afb14/bin/run.js:15:1 {\n  data: {\n    errorCode: 'NOT_FOUND',\n    message: 'The requested resource does not exist'\n  },\n  errorCode: 'NOT_FOUND'\n}",
+  "warnings": [],
+  "code": "1",
+  "status": 1,
+  "commandName": "SObjectDescribe"
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Player_List</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>Position__c</columns>
+    <columns>Uniform_Number__c</columns>
+    <columns>CONTACT.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.Player</value>
+    </filters>
+    <label>Player List</label>
+</ListView>

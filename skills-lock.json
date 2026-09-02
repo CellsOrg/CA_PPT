@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "skills": {
+    "external-diagram-mermaid-generate": {
+      "source": "forcedotcom/sf-skills",
+      "sourceType": "github",
+      "skillPath": "skills/external-diagram-mermaid-generate/SKILL.md",
+      "computedHash": "a3c1151dcdc0b7ad759467e743996f2b2fc0ae6bf95d2da17d78477ac149e69b"
+    },
+    "platform-architecture-analyze": {
+      "source": "forcedotcom/sf-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/builder/salesforce-development/skills/platform-architecture-analyze/SKILL.md",
+      "computedHash": "78bfc16a921a510bc4c99390a0585d692c6adf4e6ef07bd42700ddb27b86ad79"
+    },
+    "platform-data-and-tooling-api-context-get": {
+      "source": "forcedotcom/sf-skills",
+      "sourceType": "github",
+      "skillPath": "skills/platform-data-and-tooling-api-context-get/SKILL.md",
+      "computedHash": "05ca4d650cce8ad98ce244730790a2d2eec3194e81241639ecfa531be09a3519"
+    },
+    "platform-docs-get": {
+      "source": "forcedotcom/sf-skills",
+      "sourceType": "github",
+      "skillPath": "skills/platform-docs-get/SKILL.md",
+      "computedHash": "7e777d16b560be47095e9c281e915741205999ba4ddf0cbcb4ab0c440395e56d"
+    },
+    "platform-manifest-generate": {
+      "source": "forcedotcom/sf-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/builder/salesforce-development/skills/platform-manifest-generate/SKILL.md",
+      "computedHash": "37963847c6ed4f7bdce3524089595329e348074c3a862841b6b376afdf455f86"
+    },
+    "platform-metadata-api-context-get": {
+      "source": "forcedotcom/sf-skills",
+      "sourceType": "github",
+      "skillPath": "skills/platform-metadata-api-context-get/SKILL.md",
+      "computedHash": "7ac37ca372ba209394268998ef2f2a1f0815be5c9a36b1cbb1cbbd17b66822f6"
+    },
+    "platform-metadata-retrieve": {
+      "source": "forcedotcom/sf-skills",
+      "sourceType": "github",
+      "skillPath": "skills/platform-metadata-retrieve/SKILL.md",
+      "computedHash": "b70ef18c88b681323f2bb97824ee17f45c9132dd739b945589de9b1e274a018c"
+    },
+    "platform-soql-query": {
+      "source": "forcedotcom/sf-skills",
+      "sourceType": "github",
+      "skillPath": "skills/platform-soql-query/SKILL.md",
+      "computedHash": "227efbd3e94f4cda640d924c9912a7920675ff8bfa2b300d5f2a59b9d839fe6f"
+    }
+  }
+}

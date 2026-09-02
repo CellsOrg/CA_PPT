@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Player__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>연관 선수(최애 선수 캠페인을 추천하기 위한 근거)</description>
+    <inlineHelpText>연관 선수(최애 선수 캠페인을 추천하기 위한 근거)</inlineHelpText>
+    <label>Related Player</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Products</relationshipLabel>
+    <relationshipName>Products</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

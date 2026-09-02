@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Latest_Open_Opportunity_Next_Step__c</fullName>
+    <description>Next Step of this account&apos;s most recently modified open Opportunity, kept in sync by a Flow so PRM staff can see what action is due next without opening the Opportunity.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Auto-synced from the most recently modified open Opportunity on this Account. Do not edit manually.</inlineHelpText>
+    <label>최근 영업기회 다음 단계</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

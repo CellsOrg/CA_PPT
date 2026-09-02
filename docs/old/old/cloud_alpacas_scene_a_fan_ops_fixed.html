@@ -1,0 +1,121 @@
+<style>
+#erd svg.erDiagram .divider path { stroke-opacity: 0.5; }
+#erd svg.erDiagram .row-rect-odd path,
+#erd svg.erDiagram .row-rect-odd rect,
+#erd svg.erDiagram .row-rect-even path,
+#erd svg.erDiagram .row-rect-even rect { stroke: none !important; }
+</style>
+<div id="erd"></div>
+<script type="module">
+import mermaid from 'https://esm.sh/mermaid@11/dist/mermaid.esm.min.mjs';
+const themeMode = document.documentElement.dataset.mode;
+const dark = themeMode ? themeMode === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+await document.fonts.ready;
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'base',
+  fontFamily: '"anthropic-sans", sans-serif',
+  themeVariables: {
+    darkMode: dark,
+    fontSize: '13px',
+    fontFamily: '"anthropic-sans", sans-serif',
+    lineColor: dark ? '#9c9a92' : '#73726c',
+    textColor: dark ? '#c2c0b6' : '#3d3d3a',
+  },
+});
+const src = `erDiagram
+    ACCOUNT_FAN {
+        picklist Current_Segment__c
+        picklist Fan_Value_Tier__c
+        number Engagement_Score__c
+        date Fan_Join_Date__c
+        picklist Membership_Status__c
+    }
+    CONTACT_PLAYER {
+        picklist Position__c
+        text Uniform_Number__c
+        text Name_EN__c
+    }
+    SEASON__C {
+        date Start_Date__c
+        date End_Date__c
+        number Total_Games__c
+        number Played_Games__c
+    }
+    GAME__C {
+        datetime Game_Date__c
+        string Opponent__c
+        picklist Result__c
+        picklist Home_Away__c
+        string External_ID__c "UQ"
+    }
+    ORDER {
+        picklist Order_Type__c
+        picklist Payment_Status__c
+        picklist Purchase_Channel__c
+        picklist Membership_Status__c
+    }
+    ORDERITEM {
+        text Seat_Number__c
+        text Row__c
+        picklist Section__c
+        picklist Transfer_Status__c
+    }
+    PRODUCT2 {
+        picklist Category__c
+        picklist Tier__c
+        checkbox Is_Player_Goods__c
+    }
+    ADMISSION__C {
+        datetime Admission_Time__c
+        picklist Gate__c
+        string External_ID__c "UQ"
+    }
+    ATTENDANCE_RECORD__C {
+        number Total_Admissions__c
+        datetime First_Admission_Date__c
+        datetime Last_Admission_Date__c
+    }
+
+    CONTACT_PLAYER ||--o{ ACCOUNT_FAN : "Favorite Player L"
+    CONTACT_PLAYER ||--o{ PRODUCT2 : "Related Player L"
+    SEASON__C ||--|{ GAME__C : "MD"
+    ACCOUNT_FAN ||--o{ ORDER : "표준"
+    GAME__C ||--o{ ORDER : "Game L"
+    ORDER ||--|{ ORDERITEM : "MD 표준"
+    PRODUCT2 ||--o{ PRICEBOOKENTRY : "표준"
+    PRICEBOOKENTRY ||--o{ ORDERITEM : "표준"
+    ACCOUNT_FAN ||--o{ ORDERITEM : "Current Owner L 양도"
+    ATTENDANCE_RECORD__C ||--|{ ADMISSION__C : "MD"
+    ACCOUNT_FAN ||--o| ATTENDANCE_RECORD__C : "Fan L! 운영1대1"
+    ACCOUNT_FAN ||--o{ ADMISSION__C : "Fan L!"
+    GAME__C ||--o{ ADMISSION__C : "Game L!"
+    ORDERITEM ||--o{ ADMISSION__C : "Order Item L!"
+    ORDER ||--o{ CASE : "Related Order L"`;
+const { svg } = await mermaid.render('erd-svg', src);
+document.getElementById('erd').innerHTML = svg;
+
+document.querySelectorAll('#erd svg.erDiagram .node').forEach(node => {
+  const firstPath = node.querySelector('path[d]');
+  if (!firstPath) return;
+  const d = firstPath.getAttribute('d');
+  const nums = d.match(/-?[\d.]+/g)?.map(Number);
+  if (!nums || nums.length < 8) return;
+  const xs = [nums[0], nums[2], nums[4], nums[6]];
+  const ys = [nums[1], nums[3], nums[5], nums[7]];
+  const x = Math.min(...xs), y = Math.min(...ys);
+  const w = Math.max(...xs) - x, h = Math.max(...ys) - y;
+  const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  rect.setAttribute('x', x); rect.setAttribute('y', y);
+  rect.setAttribute('width', w); rect.setAttribute('height', h);
+  rect.setAttribute('rx', '8');
+  for (const a of ['fill', 'stroke', 'stroke-width', 'class', 'style']) {
+    if (firstPath.hasAttribute(a)) rect.setAttribute(a, firstPath.getAttribute(a));
+  }
+  firstPath.replaceWith(rect);
+});
+
+document.querySelectorAll('#erd svg.erDiagram .row-rect-odd path, #erd svg.erDiagram .row-rect-even path').forEach(p => {
+  p.setAttribute('stroke', 'none');
+});
+</script>

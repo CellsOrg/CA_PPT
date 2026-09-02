@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_Partner_Type__c</fullName>
+    <description>Cloud Alpacas와 기업 간의 관계 유형을 정의합니다. 스폰서십, 브랜드 제휴, 공동 마케팅 등 구체적인 파트너십 형태를 구분하기 위해 사용합니다.</description>
+    <inlineHelpText>이 기업이 Cloud Alpacas와 어떤 유형의 관계를 맺고 있는지 선택합니다. (예: Sponsor = 구단 스폰서, Strategic Partner = 전략적 제휴사)</inlineHelpText>
+    <label>관계 유형</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sponsor</fullName>
+                <default>false</default>
+                <label>스폰서</label>
+            </value>
+            <value>
+                <fullName>Strategic Partner</fullName>
+                <default>false</default>
+                <label>전략적 파트너</label>
+            </value>
+            <value>
+                <fullName>Media Partner</fullName>
+                <default>false</default>
+                <label>미디어 파트너</label>
+            </value>
+            <value>
+                <fullName>Marketing Partner</fullName>
+                <default>false</default>
+                <label>마케팅 파트너</label>
+            </value>
+            <value>
+                <fullName>Event Partner</fullName>
+                <default>false</default>
+                <label>이벤트 파트너</label>
+            </value>
+            <value>
+                <fullName>Technology Partner</fullName>
+                <default>false</default>
+                <label>기술 파트너</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>기타</label>
+            </value>
+            <value>
+                <fullName>System Integrator</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SI 업체</label>
+            </value>
+            <value>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>리셀러</label>
+            </value>
+            <value>
+                <fullName>Service &amp; Support Specialist</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>서비스 &amp; 지원 전문사</label>
+            </value>
+            <value>
+                <fullName>Service Provider</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>서비스 제공사</label>
+            </value>
+            <value>
+                <fullName>Distributor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>유통사</label>
+            </value>
+            <value>
+                <fullName>Alliance Partner</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>제휴 파트너</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>파트너</label>
+            </value>
+            <value>
+                <fullName>Fintech Partner</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>핀테크 파트너</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DART_Match_Pending</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Proposed_Corp_Name__c</columns>
+    <columns>Proposed_Stock_Code__c</columns>
+    <columns>Match_Confidence__c</columns>
+    <columns>Match_Rationale__c</columns>
+    <columns>DART_Match_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>DART_Match_Status__c</field>
+        <operation>equals</operation>
+        <value>검토대기</value>
+    </filters>
+    <label>DART 매칭 검토대기</label>
+</ListView>

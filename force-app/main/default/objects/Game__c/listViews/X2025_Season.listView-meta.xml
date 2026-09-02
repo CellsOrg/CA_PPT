@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2025_Season</fullName>
+    <columns>Game_Date__c</columns>
+    <columns>NAME</columns>
+    <columns>Opponent__c</columns>
+    <columns>Result__c</columns>
+    <columns>Status__c</columns>
+    <columns>Home_Away__c</columns>
+    <columns>Season__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Season__c</field>
+        <operation>contains</operation>
+        <value>2025</value>
+    </filters>
+    <label>2025 Season</label>
+</ListView>

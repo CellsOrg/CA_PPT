@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Order__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>문의와 관련된 티켓, 굿즈, 멤버십 또는 환불 대상 주문을 연결</description>
+    <inlineHelpText>문의와 관련된 티켓, 굿즈, 멤버십 또는 환불 대상 주문을 연결</inlineHelpText>
+    <label>Related Order</label>
+    <referenceTo>Order</referenceTo>
+    <relationshipLabel>Cases</relationshipLabel>
+    <relationshipName>Cases</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

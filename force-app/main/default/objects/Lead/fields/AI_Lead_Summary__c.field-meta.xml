@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AI_Lead_Summary__c</fullName>
+    <description>Prompt Template(CA_Lead_AI_Summary)이 생성한 AI Lead Summary 카드용 요약 텍스트. Lead Score 계산에는 관여하지 않으며, &quot;AI Summary 업데이트&quot;로 재생성될 때만 값이 바뀐다.</description>
+    <label>AI Lead Summary</label>
+    <length>4000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

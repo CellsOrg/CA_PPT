@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Converted__c</fullName>
+    <description>이 Member가 최종적으로 Converted(전환) 상태까지 도달했는지 1/0으로 표시합니다. Report에서 전환율(SUM/RowCount)을 계산할 때 사용합니다.</description>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL( Status , &quot;Converted&quot;), 1, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>이 팬이 최종 전환(Converted) 단계까지 도달했으면 1, 아니면 0으로 자동 계산됩니다.</inlineHelpText>
+    <label>전환 여부</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

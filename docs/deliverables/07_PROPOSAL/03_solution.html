@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="slides.css">
+<style>
+  .sub-line{margin-top:14px;font-size:19px;color:var(--muted);font-weight:500}
+  .grid{margin-top:24px;flex:1;position:relative;display:grid;
+        grid-template-columns:1fr 1fr;grid-auto-rows:min-content;column-gap:150px;row-gap:44px;align-content:space-between}
+  .cap{border-radius:20px;padding:24px 30px 26px;border:1px solid var(--line);box-shadow:0 2px 12px rgba(15,40,70,.05);
+       display:flex;flex-direction:column;background:#fff}
+  .cap .top{display:flex;align-items:center;gap:14px}
+  .cap .bdg{width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex:none}
+  .cap .bdg svg{width:24px;height:24px;color:#fff}
+  .cap h3{font-size:23px;font-weight:800;color:var(--navy)}
+  .cap .g{font-size:15px;color:var(--muted);font-weight:500;line-height:1.5;margin:14px 0 16px}
+
+  .cap.c1{border-top:5px solid var(--blue)}      .cap.c1 .bdg{background:var(--blue)}
+  .cap.c2{border-top:5px solid var(--orange)}    .cap.c2 .bdg{background:var(--orange)}
+  .cap.c3{border-top:5px solid var(--indigo)}    .cap.c3 .bdg{background:var(--indigo)}
+  .cap.c4{border-top:5px solid var(--green)}     .cap.c4 .bdg{background:var(--green)}
+  .cap.c1 .chip{background:var(--sky);color:var(--blue-ink)}
+  .cap.c2 .chip{background:var(--orange-soft);color:var(--orange-ink)}
+  .cap.c3 .chip{background:var(--indigo-soft);color:#3E41A8}
+  .cap.c4 .chip{background:var(--green-soft);color:var(--green-ink)}
+  /* keep text clear of centre hub */
+  .cap.c1{padding-right:96px}  .cap.c2{padding-left:96px}
+  .cap.c3{padding-right:96px}  .cap.c4{padding-left:96px}
+
+  .hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+       width:196px;height:196px;border-radius:50%;background:var(--navy);color:#fff;
+       display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+       box-shadow:0 10px 30px rgba(11,42,74,.28);border:6px solid #fff;z-index:5}
+  .hub b{font-size:22px;font-weight:900;letter-spacing:.02em;line-height:1.2}
+  .hub span{font-size:12px;font-weight:700;letter-spacing:.14em;opacity:.65;margin-top:6px}
+
+  .stack{margin-top:20px;display:flex;align-items:center;gap:16px}
+  .st{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 20px;
+      font-size:17px;font-weight:800;color:var(--navy-2)}
+  .plus{font-size:22px;font-weight:800;color:var(--muted)}
+  .emph{margin-left:auto;background:var(--navy);color:#fff;border-radius:12px;padding:14px 24px;
+        font-size:17px;font-weight:800}
+  .emph b{color:#FFD9B4}
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="head">
+    <div>
+      <div class="kicker">Solution · 핵심 솔루션 / 구현 범위</div>
+      <div class="title">One Fan Data, <span class="o">Four Business Capabilities</span></div>
+    </div>
+    <div class="wordmark">
+      <svg viewBox="0 0 24 24"><path d="M7 18h9a4 4 0 0 0 .5-7.97A6 6 0 0 0 5 9.5 3.5 3.5 0 0 0 7 18Z" fill="#1B6FD1"/></svg>
+      Cloud Alpacas
+    </div>
+  </div>
+
+  <div class="sub-line">하나의 팬 데이터 위에서, 비즈니스 문제를 풀기 위해 Salesforce 표준·커스텀·자동화·AI를 조합한다.</div>
+
+  <div class="grid">
+    <div class="cap c1">
+      <div class="top">
+        <span class="bdg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" stroke-linecap="round"/></svg></span>
+        <h3>B2C Fan Relationship</h3>
+      </div>
+      <div class="g">흩어진 팬을 프로필·타임라인으로 잇고, 상태에 맞는 개인화 액션까지 연결한다.</div>
+      <div class="chips">
+        <span class="chip">Fan 360</span><span class="chip">Fan Segment</span>
+        <span class="chip">Recommendation Hub</span><span class="chip">Personalization</span>
+      </div>
+    </div>
+
+    <div class="cap c2">
+      <div class="top">
+        <span class="bdg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 14v.01M17 21h4v-4M14 21h.01" stroke-linecap="round"/></svg></span>
+        <h3>Fan Experience</h3>
+      </div>
+      <div class="g">일회성 참여를 이후 분석·개인화에 쓸 수 있는 행동 데이터로 전환한다.</div>
+      <div class="chips">
+        <span class="chip">QR Event</span><span class="chip">Fan Participation</span>
+        <span class="chip">행동 데이터 축적</span>
+      </div>
+    </div>
+
+    <div class="cap c3">
+      <div class="top">
+        <span class="bdg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3ZM18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9L18 14Z" stroke-linejoin="round"/></svg></span>
+        <h3>AI / Agentforce / Automation</h3>
+      </div>
+      <div class="g">판단·정리의 수작업을 줄이고, 근거와 다음 행동을 함께 제시한다.</div>
+      <div class="chips">
+        <span class="chip">Personalization</span><span class="chip">Fan–Company Matching</span>
+        <span class="chip">Stage Guidance</span><span class="chip">Opportunity Agent</span>
+        <span class="chip">Flow / Slack</span>
+      </div>
+    </div>
+
+    <div class="cap c4">
+      <div class="top">
+        <span class="bdg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18v13H3zM8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>B2B Sponsorship Sales</h3>
+      </div>
+      <div class="g">팬덤의 가치를 Lead → Opportunity → 매출 Pipeline으로 연결한다.</div>
+      <div class="chips">
+        <span class="chip">Fan Insight</span><span class="chip">Company Matching</span>
+        <span class="chip">Lead</span><span class="chip">Account / Contact</span>
+        <span class="chip">Opportunity</span><span class="chip">Package / Quote</span>
+        <span class="chip">Revenue</span>
+      </div>
+    </div>
+
+    <div class="hub"><b>ONE<br>FAN DATA</b><span>CORE</span></div>
+  </div>
+
+  <div class="stack">
+    <span class="st">Standard Salesforce</span><span class="plus">+</span>
+    <span class="st">Custom Development</span><span class="plus">+</span>
+    <span class="st">Automation</span><span class="plus">+</span>
+    <span class="st">Agentforce</span>
+    <span class="emph"><b>Standard First</b> — 표준을 먼저, 필요한 부분만 Custom 개발</span>
+  </div>
+
+  <div class="foot"><span><b>Cloud Alpacas</b> · Fan Relationship Management</span><span>03 / 04</span></div>
+</div>
+</body>
+</html>

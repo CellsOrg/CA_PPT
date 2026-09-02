@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final_Lead_Score__c</fullName>
+    <description>Risk 감점을 반영한 최종 Lead Score (0~100). MAX(0, Total Score - Risk Penalty).</description>
+    <externalId>false</externalId>
+    <formula>MAX(0, SDO_Sales_Lead_Total__c - Risk_Penalty__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Final Lead Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

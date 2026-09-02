@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Grants visibility to the Own Organization Account record type. Assign to System Administrators only.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Own Organization Access</label>
+    <recordTypeVisibilities>
+        <recordType>Account.Own_Organization</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

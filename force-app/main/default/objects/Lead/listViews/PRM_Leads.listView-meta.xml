@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRM_Leads</fullName>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.LAST_NAME</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Final_Lead_Score__c</columns>
+    <columns>Risk_Penalty__c</columns>
+    <columns>LEAD.INDUSTRY</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>Regional_Connection__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Converted</value>
+    </filters>
+    <label>PRM Leads - Priority</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+        <allPartnerUsers></allPartnerUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDO_PRM_Region__c</fullName>
+    <description>파트너 기업 담당자가 주로 관리하는 지역 구분. Lead의 Region 값과 동일한 픽리스트로 구성되어 Convert 시 매핑됩니다.</description>
+    <inlineHelpText>이 담당자가 속한 영업 지역을 선택합니다. (West / Central / East)</inlineHelpText>
+    <label>Region</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>West</fullName>
+                <default>false</default>
+                <label>West</label>
+            </value>
+            <value>
+                <fullName>Central</fullName>
+                <default>false</default>
+                <label>Central</label>
+            </value>
+            <value>
+                <fullName>East</fullName>
+                <default>false</default>
+                <label>East</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

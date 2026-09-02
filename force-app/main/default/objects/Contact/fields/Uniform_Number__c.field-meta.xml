@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Uniform_Number__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <description>선수의 유니폼 번호</description>
+    <externalId>false</externalId>
+    <inlineHelpText>선수의 유니폼 번호</inlineHelpText>
+    <label>Uniform Number</label>
+    <length>4</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

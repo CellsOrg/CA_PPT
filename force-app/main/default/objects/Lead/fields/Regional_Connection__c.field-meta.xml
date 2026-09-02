@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regional_Connection__c</fullName>
+    <description>Cloud Alpacas 연고지역과의 관련도. Lead Scoring 지역 연고성 10점 항목에서 사용.</description>
+    <label>Regional Connection</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Home_Base</fullName>
+                <default>false</default>
+                <label>본거지</label>
+            </value>
+            <value>
+                <fullName>Adjacent_Region</fullName>
+                <default>false</default>
+                <label>인접권역</label>
+            </value>
+            <value>
+                <fullName>No_Connection</fullName>
+                <default>false</default>
+                <label>비연고</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
