@@ -1,0 +1,33 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="wf.css">
+<style>
+  .qrwrap{display:flex;flex-direction:column;align-items:center;gap:10px;flex:none}
+  .qrwrap img{width:300px;height:300px;background:#fff;border-radius:14px;padding:12px;
+    image-rendering:pixelated;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  .qrwrap .scan{font-size:17px;font-weight:800;letter-spacing:.14em;color:#FFD9B4;text-transform:uppercase}
+</style></head>
+<body><div class="slide c2">
+  <div class="wtop"><div class="lft"><span class="ch">CHAPTER II · DEMO SCENARIO — B2C</span>
+    <span class="role">06A · Live Event — Game Day (Fan Activity)</span></div>
+    <div class="rgt"><span class="fmt live"><span class="fdot"></span>LIVE</span><span class="wf-note">WIREFRAME · 레이아웃 시안 (최종 비주얼 아님)</span></div></div>
+  <div class="body">
+<div class="ph dark" style="flex:1;gap:14px">
+<span class="tag">LIVE SCOREBOARD MOCK — 실제 전광판 화면처럼</span>
+<div class="cap" style="font-size:26px">CLOUD ALPACAS &nbsp;·&nbsp; GAME DAY LIVE</div>
+<div class="cap" style="font-size:19px;color:#cdd3da">&#9918; 7회말 경기 진행 중</div>
+<div class="cap" style="font-size:22px;color:#FFD9B4">🎁 FAN EVENT OPEN — "문태양 선수 퀴즈에 참여하세요"</div>
+<div class="qrwrap">
+  <img src="quiz-qr.jpg" alt="Fan Quiz QR">
+  <div class="scan">SCAN TO JOIN · QR을 찍고 참여해주세요</div>
+</div>
+<div class="hint">설명문 금지. 전광판 그래픽 + 실물 QR. 발표자가 관객에게 직접 참여 유도.</div>
+</div>
+<div class="row" style="flex:0 0 auto;justify-content:center">
+<div class="flowrow tight"><div class="node ">관객 QR 참여</div><span class="arw">&rsaquo;</span><div class="node ">Quiz Entry<span class="n2">FanQuiz Site</span></div><span class="arw">&rsaquo;</span><div class="node ">Fan Activity</div><span class="arw">&rsaquo;</span><div class="node ">Salesforce<span class="n2">저장</span></div><span class="arw">&rsaquo;</span><div class="node ">Fan 360<span class="n2">연결</span></div></div>
+</div>
+<div class="ann"><span class="k">발표자 — 말할 것</span>“지금 여러분은 Cloud Alpacas 경기장의 관객입니다. 전광판에 이벤트가 떴습니다. QR을 찍고 참여해주세요.” — 기능 소개가 아니라 ‘지금 실제로 팬 데이터가 만들어지는 중’ 이라는 느낌.</div>
+<div class="ann"><span class="k">화면 — 보여줄 것 / 주의</span>FanQuiz Experience Site (liveFanQuizEntry LWC). 하단 띠 = 참여가 CRM 데이터가 된다는 개념도. Campaign 연동은 검증된 경우에만 Campaign Member 생성 설명. 당첨자 추첨·안내는 마무리(27)에서.</div>
+  </div>
+  <div class="wfoot">Cloud Alpacas · Final Presentation · PPT_v3 Storyboard</div>
+  <div class="wn">06A</div>
+</div></body></html>

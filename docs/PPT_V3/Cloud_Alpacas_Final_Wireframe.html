@@ -13,27 +13,40 @@
     header p { margin:0; opacity:.82; }
     main { max-width:1400px; margin:0 auto; padding:32px 24px 56px; }
     .note { margin:0 0 28px; padding:16px 18px; border-left:4px solid var(--orange); background:#fff; border-radius:8px; }
+    .note b { color:var(--navy); }
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); gap:24px; }
     figure { margin:0; overflow:hidden; background:#fff; border:1px solid var(--line); border-radius:10px; box-shadow:0 3px 12px rgba(5,25,60,.06); }
+    figure.added { border:2px solid var(--orange); }
     img { display:block; width:100%; height:auto; }
     figcaption { padding:12px 14px; font-size:14px; font-weight:650; }
+    figcaption .tag { display:inline-block; margin-left:6px; padding:1px 7px; border-radius:5px; font-size:11px; font-weight:800; letter-spacing:.04em; background:#fff2e6; color:var(--orange); vertical-align:middle; }
+    figcaption .asset { display:block; margin-top:4px; font-size:12px; font-weight:500; color:#66758d; }
     footer { padding:26px; color:#66758d; font-size:13px; text-align:center; }
   </style>
 </head>
 <body>
   <header>
     <h1>Cloud Alpacas · Final Wireframe</h1>
-    <p>최종 회의 반영본 · 25 slides</p>
+    <p>PPT v3 최종 동기화본 · 29 slides (00 Cover · 06A Fan Event · 26 Ending · 27 Gift Notice 포함)</p>
   </header>
   <main>
-    <p class="note">01–05는 프로젝트 개요 및 AS-IS → TO-BE 최종 메시지입니다. 06–23의 데모 캡처·영상 영역은 실제 발표 전 검증된 자료로 교체해 사용합니다.</p>
+    <p class="note">
+      <b>01–05</b>는 프로젝트 개요 및 AS-IS → TO-BE 최종 메시지입니다.
+      <b>06–23</b>의 데모 캡처·영상 영역은 실제 발표 전 검증된 자료로 교체해 사용합니다.
+      <b>06A</b>는 06과 07 사이에 삽입한 현장 이벤트 슬라이드로, 실물 QR(<code>src/quiz-qr.jpg</code>)이 렌더링됩니다.
+      <b>27</b>은 26 Ending 다음 관객에게 전달하는 안내 슬라이드로, <code>src/sad.png</code>가 메인 비주얼입니다.
+      발표 흐름: <b>26 Ending → 27 Gift Notice → PPT 종료 → (필요 시) Salesforce Org LIVE → Q&amp;A</b>.
+      별도 Winner 명단·Q&amp;A 슬라이드는 만들지 않습니다.
+    </p>
     <section class="grid">
+      <figure class="added"><img src="slides/slide-00.png" alt="00 Cover"><figcaption>00 · Cover<span class="tag">ADDED</span><span class="asset">From Fan Data to Revenue.</span></figcaption></figure>
       <figure><img src="slides/slide-01.png" alt="01 프로젝트 선정 배경"><figcaption>01 · 프로젝트 선정 배경</figcaption></figure>
       <figure><img src="slides/slide-02.png" alt="02 Cloud Alpacas 소개"><figcaption>02 · Cloud Alpacas 소개</figcaption></figure>
       <figure><img src="slides/slide-03.png" alt="03 팀 구성과 역할"><figcaption>03 · 팀 구성과 역할</figcaption></figure>
       <figure><img src="slides/slide-04.png" alt="04 수행 절차 및 방법"><figcaption>04 · 수행 절차 및 방법</figcaption></figure>
       <figure><img src="slides/slide-05.png" alt="05 AS-IS TO-BE"><figcaption>05 · AS-IS → TO-BE 핵심 변화</figcaption></figure>
-      <figure><img src="slides/slide-06.png" alt="06 S1 개요"><figcaption>06 · Scene S1 개요</figcaption></figure>
+      <figure><img src="slides/slide-06.png" alt="06 S1 개요"><figcaption>06 · Scene S1 개요 — Fan 360</figcaption></figure>
+      <figure class="added"><img src="slides/slide-06A.png" alt="06A Fan Event Game Day"><figcaption>06A · Fan Event — Game Day (Live)<span class="tag">ADDED</span><span class="asset">Main visual: src/quiz-qr.jpg · "SCAN TO JOIN"</span></figcaption></figure>
       <figure><img src="slides/slide-07.png" alt="07 S1 데모"><figcaption>07 · S1 Demo Flow</figcaption></figure>
       <figure><img src="slides/slide-08.png" alt="08 S2 개요"><figcaption>08 · Scene S2 개요</figcaption></figure>
       <figure><img src="slides/slide-09.png" alt="09 S2 데모"><figcaption>09 · S2 Demo Flow</figcaption></figure>
@@ -53,8 +66,16 @@
       <figure><img src="slides/slide-23.png" alt="23 S9 데모"><figcaption>23 · S9 Demo Flow</figcaption></figure>
       <figure><img src="slides/slide-24.png" alt="24 성과 및 마무리"><figcaption>24 · 성과 및 마무리</figcaption></figure>
       <figure><img src="slides/slide-25.png" alt="25 자체 평가"><figcaption>25 · 자체 평가</figcaption></figure>
+      <figure class="added"><img src="slides/slide-26.png" alt="26 Ending"><figcaption>26 · Ending — From Learning to Building<span class="tag">ADDED</span><span class="asset">"We didn't start with Salesforce features. We started with the business."</span></figcaption></figure>
+      <figure class="added"><img src="slides/slide-27.png" alt="27 Quiz Winner Gift Delivery Notice"><figcaption>27 · Quiz Winner / Gift Delivery Notice<span class="tag">ADDED</span><span class="asset">Main visual: src/sad.png · 경품 추후 전달 안내</span></figcaption></figure>
+    </section>
+
+    <h2 style="margin:44px 0 14px;font-size:18px;color:var(--navy)">삽입 asset 원본</h2>
+    <section class="grid">
+      <figure><img src="src/quiz-qr.jpg" alt="Fan Quiz QR" style="max-width:320px;margin:20px auto;image-rendering:pixelated"><figcaption>src/quiz-qr.jpg<span class="asset">06A Fan Event 실물 QR — destination URL 변경 금지</span></figcaption></figure>
+      <figure><img src="src/sad.png" alt="이벤트 경품 안내"><figcaption>src/sad.png<span class="asset">27 Gift Delivery Notice 메인 비주얼</span></figcaption></figure>
     </section>
   </main>
-  <footer>Cloud Alpacas · Final Presentation Wireframe</footer>
+  <footer>Cloud Alpacas · Final Presentation Wireframe · PPT v3 (29 slides)</footer>
 </body>
 </html>
