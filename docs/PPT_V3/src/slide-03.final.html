@@ -1,0 +1,44 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="wf.css">
+<style>
+  .slide.c2{--acc:#2F6FB0}
+  .head h1{font-size:44px;font-weight:800;color:#15233c;letter-spacing:-.01em;margin:2px 0 6px}
+  .head .sub{font-size:19px;color:#586374;font-weight:600}
+  .team{flex:1;display:flex;gap:22px;min-height:0;margin:22px 0 18px}
+  .mcard{flex:1;background:var(--cbg);border:1px solid var(--cbd);border-radius:16px;
+    padding:26px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:0}
+  .mcard img{width:96%;aspect-ratio:1;object-fit:cover;border-radius:14px;
+    box-shadow:0 10px 26px rgba(10,25,60,.16);border:2px solid #fff}
+  .mcard .role{font-size:14px;font-weight:800;letter-spacing:.1em;color:var(--ac);text-transform:uppercase;margin-top:2px}
+  .mcard .name{font-size:30px;font-weight:900;color:#15233c;line-height:1}
+  .mcard .desc{font-size:15px;font-weight:700;color:#586374;text-align:center;line-height:1.35}
+  .flow{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:18px;
+    background:linear-gradient(90deg,#0a1f3d,#0d2a53);border-radius:14px;padding:22px 30px}
+  .fnode{font-size:23px;font-weight:800;color:#eaf1fb;padding:12px 30px;background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.16);border-radius:11px}
+  .farrow{font-size:26px;color:#7fa8dd;font-weight:900}
+</style></head>
+<body><div class="slide c2">
+  <div class="wtop"><div class="lft"><span class="ch">02 · 팀 구성과 역할</span>
+    <span class="role">5-person delivery team</span></div></div>
+  <div class="head">
+    <h1>기능 단위가 아니라 고객 여정의 구간을 끝까지 책임졌다</h1>
+    <div class="sub">PM 1명과 Feature Owner 4명 구조로 Requirement부터 QA까지 담당 구간을 연결했다</div>
+  </div>
+  <div class="team">
+    <div class="mcard" style="--cbg:#EEF5FB;--cbd:#CADFF1;--ac:#2F6FB0"><img src="../overlays/member_sara.png"><span class="role">FAN</span><span class="name">Sara</span><span class="desc">Fan 360 · Fan Insight</span></div>
+    <div class="mcard" style="--cbg:#E9F5F6;--cbd:#BFE0E4;--ac:#0E7C86"><img src="../overlays/member_hyejune.png"><span class="role">PIPELINE</span><span class="name">혜준</span><span class="desc">Lead</span></div>
+    <div class="mcard" style="--cbg:#EEF5FB;--cbd:#CADFF1;--ac:#2F6FB0"><img src="../overlays/member_aaron.png"><span class="role">CUSTOMER</span><span class="name">아론</span><span class="desc">Account · Contact</span></div>
+    <div class="mcard" style="--cbg:#EAF7F1;--cbd:#BCE4D2;--ac:#1E9E6A"><img src="../overlays/member_eunyeong.png"><span class="role">DEAL</span><span class="name">은영</span><span class="desc">Opportunity</span></div>
+    <div class="mcard" style="--cbg:#EAF7F1;--cbd:#BCE4D2;--ac:#1E9E6A"><img src="../overlays/member_seungwoo.png"><span class="role">REVENUE</span><span class="name">승우</span><span class="desc">Product · Quote · Campaign</span></div>
+  </div>
+  <div class="flow">
+    <span class="fnode">요구사항 정의</span><span class="farrow">→</span>
+    <span class="fnode">설계</span><span class="farrow">→</span>
+    <span class="fnode">구현</span><span class="farrow">→</span>
+    <span class="fnode">통합</span><span class="farrow">→</span>
+    <span class="fnode">검증</span>
+  </div>
+  <div class="wfoot">Cloud Alpacas · Final Presentation</div>
+  <div class="wn">03</div>
+</div></body></html>

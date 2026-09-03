@@ -1,0 +1,73 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="wf.css">
+<style>
+  .slide.c2b{--acc:#1E9E6A}
+  .head h1{font-size:44px;font-weight:800;color:#15233c;letter-spacing:-.01em;margin:2px 0 6px}
+  .head .sub{font-size:19px;color:#586374;font-weight:600}
+  .colhead{display:flex;gap:20px;margin:16px 0 10px}
+  .colhead .a{width:30%;font-size:15px;font-weight:800;letter-spacing:.1em;color:#C0392B;text-transform:uppercase}
+  .colhead .b{flex:1;font-size:15px;font-weight:800;letter-spacing:.1em;color:#1E9E6A;text-transform:uppercase;padding-left:74px}
+  .rows{flex:1;display:flex;flex-direction:column;gap:16px;min-height:0}
+  .r{flex:1;display:flex;align-items:stretch;gap:20px}
+  /* AS-IS card */
+  .asis{width:30%;background:#FBF0EF;border:1px solid #EBC7C3;border-left:5px solid #D6564A;border-radius:12px;
+    padding:16px 20px;display:flex;flex-direction:column;justify-content:center;gap:7px}
+  .asis .k{font-size:13px;font-weight:800;letter-spacing:.06em;color:#B0453B}
+  .asis .t{font-size:21px;font-weight:800;color:#7a2a22;line-height:1.2}
+  .asis .d{font-size:15px;font-weight:600;color:#8a5750;line-height:1.4}
+  .arrow{display:flex;align-items:center;color:#98A2B1;font-size:34px;font-weight:900}
+  /* TO-BE card */
+  .tobe{flex:1;background:#fff;border:1px solid #DCE3EC;border-left:5px solid var(--tc);border-radius:12px;
+    padding:15px 22px;display:flex;flex-direction:column;justify-content:center;gap:11px}
+  .tobe .th{font-size:23px;font-weight:800;color:var(--tc);line-height:1.15}
+  .chips{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .chip{font-size:16px;font-weight:800;color:#15233c;background:var(--cbg);border:1.5px solid var(--cbd);
+    border-radius:9px;padding:9px 15px;white-space:nowrap}
+  .chips .ar{color:#AEB7C2;font-size:19px;font-weight:800}
+  .tobe .d{font-size:15px;font-weight:600;color:#586374;line-height:1.4}
+  /* bottom message */
+  .foot{flex:0 0 auto;background:linear-gradient(90deg,#0a1f3d,#0d2a53);border-radius:14px;padding:20px 30px;
+    font-size:20px;font-weight:800;color:#fff;text-align:center;line-height:1.4;margin-top:14px}
+  .foot b{color:#ffb066}
+</style></head>
+<body><div class="slide c2b">
+  <div class="wtop"><div class="lft"><span class="ch">04 · AS-IS / 05 · TO-BE</span>
+    <span class="role">핵심 변화</span></div></div>
+  <div class="head">
+    <h1>세 개의 단절을, 세 개의 연결된 Revenue Flow로 바꾼다</h1>
+    <div class="sub">문제와 기능을 나열하는 것이 아니라, 팬 데이터부터 다음 영업 행동까지 이어지는 업무 흐름을 설계한다</div>
+  </div>
+  <div class="colhead"><div class="a">AS-IS · Pain Point</div><div class="b">TO-BE · Salesforce Value</div></div>
+  <div class="rows">
+    <div class="r">
+      <div class="asis"><span class="k">01 · B2C</span><span class="t">늘어난 팬, 어려워진 개인화</span><span class="d">여러 이력을 종합하고 대규모 팬에게 맞춤 메시지와 Action을 설계하기 어렵다</span></div>
+      <div class="arrow">→</div>
+      <div class="tobe" style="--tc:#2F6FB0;--cbg:#EEF5FB;--cbd:#A7C7E6">
+        <span class="th">Fan Data → Personalized Engagement</span>
+        <div class="chips"><span class="chip">통합 Fan Data</span><span class="ar">›</span><span class="chip">Segment</span><span class="ar">›</span><span class="chip">Recommendation</span><span class="ar">›</span><span class="chip">Personalized Action</span></div>
+        <span class="d">Fan 360과 AI로 팬이 늘어도 개별 관계를 관리</span>
+      </div>
+    </div>
+    <div class="r">
+      <div class="asis"><span class="k">02 · B2C ↔ B2B</span><span class="t">Fan Insight와 Sponsorship의 단절</span><span class="d">팬을 이해해도 어떤 산업·기업에 어떤 기회로 연결할지 다시 판단해야 한다</span></div>
+      <div class="arrow">→</div>
+      <div class="tobe" style="--tc:#0E7C86;--cbg:#E9F5F6;--cbd:#A9CFD6">
+        <span class="th">Fan Insight → Sponsorship Opportunity</span>
+        <div class="chips"><span class="chip">Insight 분석</span><span class="ar">›</span><span class="chip">산업 탐색</span><span class="ar">›</span><span class="chip">Sponsor 평가</span><span class="ar">›</span><span class="chip">Opportunity</span></div>
+        <span class="d">Fan Value를 근거로 적합 기업을 발굴하고 영업 기회로 연결</span>
+      </div>
+    </div>
+    <div class="r">
+      <div class="asis"><span class="k">03 · B2B</span><span class="t">쌓이지만 활용되지 못하는 영업 경험</span><span class="d">Interaction·Deal Data가 쌓여도 현재 상황과 다음 행동을 사람이 다시 판단한다</span></div>
+      <div class="arrow">→</div>
+      <div class="tobe" style="--tc:#1E9E6A;--cbg:#EAF7F1;--cbd:#A6DEC6">
+        <span class="th">Sales Activity → Intelligence → Action</span>
+        <div class="chips"><span class="chip">Activity 기록</span><span class="ar">›</span><span class="chip">AI Intelligence</span><span class="ar">›</span><span class="chip">Deal Context</span><span class="ar">›</span><span class="chip">Next Action</span></div>
+        <span class="d">영업 경험을 조직의 Intelligence로 축적해 빠르고 일관된 의사결정을 지원</span>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><b>Fan Data</b>는 개인화된 관계로, <b>Fan Insight</b>는 Sponsorship Opportunity로, <b>Sales Activity</b>는 다음 Action을 위한 Intelligence로 전환된다</div>
+  <div class="wfoot">Cloud Alpacas · Final Presentation</div>
+  <div class="wn">05</div>
+</div></body></html>

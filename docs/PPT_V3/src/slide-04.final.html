@@ -1,0 +1,55 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="wf.css">
+<style>
+  .slide.c1{--acc:#1F3A5F}
+  .head h1{font-size:46px;font-weight:800;color:#15233c;letter-spacing:-.01em;margin:2px 0 6px}
+  .head .sub{font-size:20px;color:#586374;font-weight:600}
+  .wrap{flex:1;display:flex;flex-direction:column;gap:24px;min-height:0;margin-top:18px}
+  /* PRINCIPLE — compact, on top */
+  .prow{display:flex;gap:20px;flex:0 0 auto}
+  .pcard{flex:1;background:#fff;border:1px solid #DCE3EC;border-left:5px solid var(--pc);border-radius:12px;
+    padding:16px 22px;display:flex;flex-direction:column;gap:6px}
+  .pcard .pk{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--pc)}
+  .pcard .ptl{font-size:23px;font-weight:800;color:#15233c;line-height:1.1}
+  .pcard .ps{font-size:15px;font-weight:600;color:#586374;line-height:1.4}
+  /* 7-STEP PROCESS — prominent, on bottom */
+  .proc{flex:1;background:linear-gradient(180deg,#0a1f3d,#0d2a53);border-radius:16px;
+    padding:26px 44px;display:flex;flex-direction:column;justify-content:center;gap:30px;box-shadow:0 16px 40px rgba(10,25,60,.22)}
+  .proc .pt{font-size:16px;font-weight:800;letter-spacing:.16em;color:#8fb4e6;text-transform:uppercase}
+  .steps{display:flex;align-items:flex-start;position:relative}
+  .steps::before{content:"";position:absolute;left:7%;right:7%;top:37px;height:4px;border-radius:2px;
+    background:linear-gradient(90deg,#ff6b00,#ffb066);z-index:0}
+  .step{flex:1;display:flex;flex-direction:column;align-items:center;gap:16px;position:relative;z-index:1}
+  .step .num{width:74px;height:74px;border-radius:50%;background:#ff6b00;color:#fff;font-size:30px;font-weight:900;
+    display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 7px rgba(255,107,0,.16),0 8px 20px rgba(0,0,0,.3)}
+  .step .lb{font-size:20px;font-weight:800;color:#eaf1fb;text-align:center;line-height:1.25}
+</style></head>
+<body><div class="slide c1">
+  <div class="wtop"><div class="lft"><span class="ch">03 · 수행 절차 및 방법</span>
+    <span class="role">Business-first delivery</span></div></div>
+  <div class="head">
+    <h1>비즈니스 문제에서 시작해 검증 가능한 Demo까지</h1>
+    <div class="sub">Object나 기능을 먼저 정하지 않고, 고객과 업무 흐름을 정의한 뒤 Salesforce 표준과 확장을 선택했다</div>
+  </div>
+  <div class="wrap">
+    <div class="prow">
+      <div class="pcard" style="--pc:#2F6FB0"><span class="pk">PRINCIPLE 01</span><span class="ptl">Standard first</span><span class="ps">Account·Contact·Lead·Opportunity·Campaign·Quote를 우선 활용</span></div>
+      <div class="pcard" style="--pc:#7B4FBE"><span class="pk">PRINCIPLE 02</span><span class="ptl">Human in the loop</span><span class="ps">AI는 분석·추천을 돕고 실행과 결정은 담당자가 확인</span></div>
+      <div class="pcard" style="--pc:#1E9E6A"><span class="pk">PRINCIPLE 03</span><span class="ptl">Evidence before claim</span><span class="ps">구현·검증된 범위만 발표하고 Future Scope는 분리</span></div>
+    </div>
+    <div class="proc">
+      <div class="pt">Delivery Process · 7 Steps</div>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div class="lb">Business<br>Problem</div></div>
+        <div class="step"><div class="num">2</div><div class="lb">Persona<br>&amp; Story</div></div>
+        <div class="step"><div class="num">3</div><div class="lb">Domain<br>&amp; Workflow</div></div>
+        <div class="step"><div class="num">4</div><div class="lb">Salesforce<br>Standard</div></div>
+        <div class="step"><div class="num">5</div><div class="lb">Flow·Apex<br>·LWC</div></div>
+        <div class="step"><div class="num">6</div><div class="lb">Agentforce</div></div>
+        <div class="step"><div class="num">7</div><div class="lb">Demo<br>&amp; QA</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="wfoot">Cloud Alpacas · Final Presentation</div>
+  <div class="wn">04</div>
+</div></body></html>

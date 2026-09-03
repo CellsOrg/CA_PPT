@@ -1,0 +1,77 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="wf.css">
+<style>
+  /* ---- night stadium scene ---- */
+  body{background:#05070d}
+  .slide{
+    background:
+      radial-gradient(1000px 420px at 14% -10%, rgba(255,236,190,.24), transparent 60%),
+      radial-gradient(1000px 420px at 86% -10%, rgba(190,220,255,.18), transparent 60%),
+      linear-gradient(180deg,#0a1326 0%, #0a1120 46%, #0b1a12 100%);
+    color:#e7edf6;
+  }
+  .slide::before{background:linear-gradient(90deg,#ff6b00,#ffd9b4,#2F6FB0)}
+  .body{position:relative;z-index:3}
+  .crowd{z-index:1}
+  /* ---- stadium floodlight banks ---- */
+  .flood{position:absolute;top:2px;z-index:2;width:150px;height:54px;background:linear-gradient(180deg,#121826,#0a0f18);
+    border:2px solid #212b3d;border-radius:7px;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(2,1fr);
+    gap:4px;padding:6px 8px;box-shadow:0 0 60px 16px rgba(255,247,214,.30)}
+  .flood i{border-radius:50%;background:radial-gradient(circle at 40% 35%,#ffffff 0%,#fff4cf 45%,#ffcf6b 80%,#a97b20 100%);
+    box-shadow:0 0 9px #fff2c4}
+  .flood::after{content:"";position:absolute;left:50%;top:100%;transform:translateX(-50%);
+    border-left:120px solid transparent;border-right:120px solid transparent;border-top:340px solid rgba(255,246,214,.10)}
+  .flood.l{left:9%}.flood.c{left:calc(50% - 75px)}.flood.r{right:9%}
+  .wtop{border-bottom-color:rgba(255,255,255,.14);position:relative;z-index:5}
+  .wtop .ch{color:#9fb3d4}
+  .wtop .role{color:#cdd6e4}
+  .wfoot,.wn{color:#8a97ad}
+  /* ---- JUMBOTRON (LED scoreboard) ---- */
+  .ph.dark{
+    background:linear-gradient(180deg,#0a0e15,#0c1220)!important;
+    border:none!important;border-radius:16px;color:#eaf1fb;
+    box-shadow:0 0 0 9px #0a0d12, 0 0 0 12px #202a38, 0 26px 64px rgba(0,0,0,.6),
+               0 0 120px rgba(255,150,60,.22);
+    position:relative;overflow:hidden;z-index:2}
+  .ph.dark::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:radial-gradient(rgba(255,255,255,.05) 1px, transparent 1.5px);
+    background-size:6px 6px}
+  /* LED text */
+  .led{font-family:'DS-Digital','Consolas','Menlo',ui-monospace,monospace;letter-spacing:.06em;font-weight:700}
+  .ph.dark .tag{background:#141b28;border-color:#2b3a52;color:#ffd9b4}
+  .led-amber{color:#ffb020;text-shadow:0 0 8px rgba(255,176,32,.8),0 0 20px rgba(255,140,0,.5)}
+  .led-green{color:#39e26a;text-shadow:0 0 8px rgba(57,226,106,.8),0 0 20px rgba(20,180,70,.5)}
+  .led-white{color:#eef4ff;text-shadow:0 0 8px rgba(200,225,255,.7)}
+  .qrwrap{display:flex;flex-direction:column;align-items:center;gap:10px;flex:none;z-index:3}
+  .qrwrap img{width:300px;height:300px;background:#fff;border-radius:14px;padding:12px;
+    image-rendering:pixelated;box-shadow:0 12px 34px rgba(0,0,0,.5),0 0 0 4px rgba(255,215,150,.30)}
+  .qrwrap .scan{font-size:19px;letter-spacing:.16em;text-transform:uppercase}
+  .flowrow .node{background:rgba(255,255,255,.96);color:#15233c;border-color:rgba(255,255,255,.5)}
+  .flowrow .arw{color:#9fb3d4}
+</style></head>
+<body><div class="slide c2">
+  <div class="flood l"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="flood c"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="flood r"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="wtop"><div class="lft"><span class="ch">CHAPTER II · DEMO SCENARIO — B2C</span>
+    <span class="role">06A · Live Event — Game Day (Fan Activity)</span></div>
+    <div class="rgt"><span class="fmt live"><span class="fdot"></span>LIVE</span></div></div>
+  <div class="body">
+<div class="ph dark" style="flex:1;gap:16px">
+<span class="tag">CLOUD ALPACAS · JUMBOTRON — GAME DAY LIVE</span>
+<div class="led led-amber" style="font-size:34px">CLOUD ALPACAS &nbsp;·&nbsp; GAME DAY LIVE</div>
+<div class="led led-green" style="font-size:22px">&#9918; 7회말 경기 진행 중 &nbsp; HOME 4 : 3 AWAY</div>
+<div class="led led-amber" style="font-size:23px">🎁 FAN EVENT OPEN — "문태양 선수 퀴즈에 참여하세요"</div>
+<div class="qrwrap">
+  <img src="quiz-qr.jpg" alt="Fan Quiz QR">
+  <div class="scan led led-white">SCAN TO JOIN · QR을 찍고 참여해주세요</div>
+</div>
+</div>
+<div class="row" style="flex:0 0 auto;justify-content:center">
+<div class="flowrow tight"><div class="node ">관객 QR 참여</div><span class="arw">&rsaquo;</span><div class="node ">Quiz Entry<span class="n2">FanQuiz Site</span></div><span class="arw">&rsaquo;</span><div class="node ">Fan Activity</div><span class="arw">&rsaquo;</span><div class="node ">Salesforce<span class="n2">저장</span></div><span class="arw">&rsaquo;</span><div class="node ">Fan 360<span class="n2">연결</span></div></div>
+</div>
+  </div>
+  <div class="crowd"></div>
+  <div class="wfoot">Cloud Alpacas · Final Presentation</div>
+  <div class="wn">06A</div>
+</div></body></html>
