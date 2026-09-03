@@ -115,6 +115,7 @@
 (function(){
   const P='slides/', O='overlays/', C='captures/';
   const OVW={x:56,y:222,w:1812,h:800}, DEMO={x:56,y:338,w:1812,h:686};
+  const NOSHOT=/[?&]noshot/.test(location.search);  // background-only render (photos placed as PPTX objects instead)
   // 29 wireframe slides in deck order. ovl = overlay HTML (positioned in % of the 1920x1080 grid). anim = enter hook key.
   const S = [
     {src:P+'slide-00.png',  name:'00 · Cover', ovl:coverOv()},
@@ -246,9 +247,9 @@
   }
   // full-bleed content areas (right column removed): OVW = overview slides, DEMO = demo-flow slides (below the step bar)
   function fillMask(a){ return demoMasks()+`<div class="mask" style="${st(a.x,a.y,a.w,a.h)}"></div>`; }
-  function fillPhoto(a,src){ return fillMask(a)+`<img class="oimg shot" src="${C}${src}" style="${st(a.x+8,a.y+8,a.w-16,a.h-16)}padding:6px;">`; }
-  function fillVideo(a,src){ return fillMask(a)+`<video class="shot" src="${C}${src}" controls playsinline preload="metadata" style="${st(a.x+8,a.y+8,a.w-16,a.h-16)}background:#0d0d0d;"></video>`; }
-  function fillSeq(a){ return fillMask(a)+`<div class="seq" style="${st(a.x+8,a.y+8,a.w-16,a.h-16)}"></div>`; }
+  function fillPhoto(a,src){ if(NOSHOT) return fillMask(a); return fillMask(a)+`<img class="oimg shot" src="${C}${src}" style="${st(a.x+8,a.y+8,a.w-16,a.h-16)}padding:6px;">`; }
+  function fillVideo(a,src){ if(NOSHOT) return fillMask(a); return fillMask(a)+`<video class="shot" src="${C}${src}" controls playsinline preload="metadata" style="${st(a.x+8,a.y+8,a.w-16,a.h-16)}background:#0d0d0d;"></video>`; }
+  function fillSeq(a){ if(NOSHOT) return fillMask(a); return fillMask(a)+`<div class="seq" style="${st(a.x+8,a.y+8,a.w-16,a.h-16)}"></div>`; }
 
   function slide06Ov(){ return fillPhoto(OVW,'cap_s1_fan360.png'); }             // 7  · Fan 360 full
   function slide08Ov(){ return fillPhoto(OVW,'cap_s2_recommendation_hub.png'); } // 10 · Recommendation Hub full
@@ -264,69 +265,64 @@
   }
 
   // ---------- enter animations ----------
+  // ---- step-based sequences: one photo per click (identical model used for PPTX export) ----
+  // Each builder returns {max, initial, show(k)}. runSeq wires interactive clicks OR an export step.
+  function bArticles(el){
+    const old=el.querySelector('.slam'); if(old) old.remove();
+    const slam=document.createElement('div'); slam.className='slam';
+    el.querySelector('.box').appendChild(slam);
+    const pos=[[4,17,29,-4],[35.5,9,29,3],[67,17,29,-2.5]];
+    const arts=[];
+    pos.forEach((p,i)=>{ const a=document.createElement('div'); a.className='art';
+      a.style.cssText=`left:${p[0]}%;top:${p[1]}%;width:${p[2]}%;--rot:${p[3]}deg;`;
+      a.innerHTML=`<img src="${O}article_0${i+1}.png">`; slam.appendChild(a); arts.push(a); });
+    const a4=document.createElement('div'); a4.className='art cover4';
+    a4.style.cssText='left:19.5%;top:6%;width:42%;--rot:1.5deg;';
+    a4.innerHTML=`<img src="${O}article_04.png">`; slam.appendChild(a4); arts.push(a4);
+    return { max:5, initial:1, show(k){
+      if(k>=5){ slam.classList.remove('on'); slam.classList.add('clear'); return; }
+      slam.classList.remove('clear'); slam.classList.add('on');
+      arts.forEach((a,i)=>{ if(i<k) a.classList.add('hit'); else { a.classList.remove('hit'); a.style.opacity='0'; } });
+    }};
+  }
+  function bHighlight(el){
+    const s=el.querySelector('.seq'); s.innerHTML='';
+    const d=JSON.parse(el.dataset.seq||'{}');
+    const mk=(src,cls)=>{ const im=document.createElement('img'); im.src=C+src; im.className=cls;
+      im.style.cssText='left:0;top:0;width:100%;height:100%;'; return im; };
+    const base=mk(d.base,'hl'); base.style.zIndex=1; base.classList.add('show'); s.appendChild(base);
+    const hl=mk(d.hl,'hl'); hl.style.zIndex=2; s.appendChild(hl);
+    let up=null; if(d.up){ up=mk(d.up,'up'); up.style.zIndex=3; s.appendChild(up); }
+    return { max:(d.up?2:1), initial:0, show(k){ hl.classList.toggle('show',k>=1); if(up) up.classList.toggle('show',k>=2); }};
+  }
+  function bStack(el){
+    const s=el.querySelector('.seq'); s.innerHTML='';
+    const list=JSON.parse(el.dataset.imgs||'[]');
+    const big=Math.max(78,100-(list.length-1)*6);
+    const items=list.map((src,i)=>{ const im=document.createElement('img');
+      const off=i*(list.length>1?(100-big)/(list.length-1):0), rot=(i-(list.length-1)/2)*1.2;
+      im.src=C+src;
+      im.style.cssText=`position:absolute;left:${off}%;top:${off}%;width:${big}%;height:${big}%;`+
+        `object-fit:contain;background:#fff;border-radius:10px;padding:5px;`+
+        `box-shadow:0 16px 42px rgba(5,20,50,.34),0 0 0 1px rgba(20,40,80,.10);`+
+        `opacity:0;transform:scale(1.12) rotate(${rot}deg);transition:opacity .5s ease, transform .55s cubic-bezier(.2,.9,.3,1.2);z-index:${i+2};`;
+      s.appendChild(im); return {im,rot}; });
+    return { max:list.length-1, initial:0, show(k){
+      items.forEach((it,i)=>{ if(i<=k){ it.im.style.opacity='1'; it.im.style.transform=`scale(1) rotate(${it.rot}deg)`; } }); }};
+  }
+  const builders={articles:bArticles, highlightSeq:bHighlight, stack:bStack};
+  function runSeq(el, kind, exportStep){
+    const s=el.querySelector('.seq'); if(kind!=='articles' && !s) return;
+    const c=builders[kind](el);
+    if(exportStep!==undefined){ c.show(Math.min(exportStep,c.max)); return; }
+    let k=c.initial; c.show(k);
+    el._ci=0; el._clickActions=[];
+    for(let j=k+1;j<=c.max;j++){ const t=j; el._clickActions.push(()=>c.show(t)); }
+  }
   const anims={
-    // slide 2: three KBO headlines slam in and STAY (original aspect); the 4th arrives on click, covering them
-    articles:function(el){
-      const old=el.querySelector('.slam'); if(old) old.remove();
-      const box=el.querySelector('.box');
-      const slam=document.createElement('div'); slam.className='slam';
-      const pos=[[4,17,29,-4],[35.5,9,29,3],[67,17,29,-2.5]];
-      pos.forEach((p,i)=>{
-        const a=document.createElement('div'); a.className='art';
-        a.style.cssText=`left:${p[0]}%;top:${p[1]}%;width:${p[2]}%;--rot:${p[3]}deg;`;
-        a.innerHTML=`<img src="${O}article_0${i+1}.png">`;
-        slam.appendChild(a);
-      });
-      box.appendChild(slam);
-      requestAnimationFrame(()=>slam.classList.add('on'));
-      let t=280; [...slam.querySelectorAll('.art')].forEach(a=>{ setTimeout(()=>{ if(slam.isConnected) a.classList.add('hit'); }, t); t+=560; });
-      el._ci=0; el._clickActions=[
-        function(){ // 1st click: 4th headline covers the three
-          if(!slam.isConnected||slam.querySelector('.cover4')) return;
-          const a=document.createElement('div'); a.className='art cover4';
-          a.style.cssText=`left:19.5%;top:6%;width:42%;--rot:1.5deg;`;
-          a.innerHTML=`<img src="${O}article_04.png">`;
-          slam.appendChild(a); requestAnimationFrame(()=>a.classList.add('hit'));
-        },
-        function(){ // 2nd click: clear the montage, revealing the slide content
-          if(!slam.isConnected) return;
-          slam.classList.remove('on'); slam.classList.add('clear');
-          setTimeout(()=>{ if(slam.isConnected) slam.remove(); }, 600);
-        }
-      ];
-    },
-    // slides 14/15: same screen — highlight version fades in; a 3rd screen slides up on click
-    highlightSeq:function(el){
-      const s=el.querySelector('.seq'); if(!s) return; s.innerHTML='';
-      const d=JSON.parse(el.dataset.seq||'{}');
-      const mk=(src,cls)=>{ const im=document.createElement('img'); im.src=C+src; im.className=cls;
-        im.style.cssText='left:0;top:0;width:100%;height:100%;'; return im; };
-      const base=mk(d.base,'hl'); base.style.zIndex=1; base.classList.add('show'); s.appendChild(base);
-      const hl=mk(d.hl,'hl'); hl.style.zIndex=2; s.appendChild(hl);
-      setTimeout(()=>{ if(hl.isConnected) hl.classList.add('show'); }, 1100);
-      el._ci=0; el._clickActions=[];
-      if(d.up){ const up=mk(d.up,'up'); up.style.zIndex=3; s.appendChild(up);
-        el._clickActions.push(function(){ up.classList.add('show'); }); }
-    },
-    // generic overlapping stack (auto pop-in)
-    stack:function(el){
-      const s=el.querySelector('.seq'); if(!s) return;
-      const list=JSON.parse(el.dataset.imgs||'[]'); s.innerHTML='';
-      const big=Math.max(78,100-(list.length-1)*6);
-      list.forEach((src,i)=>{
-        const im=document.createElement('img');
-        const off=i*(list.length>1?(100-big)/(list.length-1):0), rot=(i-(list.length-1)/2)*1.2;
-        im.src=C+src;
-        im.style.cssText=`position:absolute;left:${off}%;top:${off}%;width:${big}%;height:${big}%;`+
-          `object-fit:contain;background:#fff;border-radius:10px;padding:5px;`+
-          `box-shadow:0 16px 42px rgba(5,20,50,.34),0 0 0 1px rgba(20,40,80,.10);`+
-          `opacity:0;transform:scale(1.12) rotate(${rot}deg);z-index:${i+2};`;
-        s.appendChild(im);
-      });
-      let t=240; [...s.children].forEach((im,i)=>{ const rot=(i-(list.length-1)/2)*1.2;
-        setTimeout(()=>{ im.style.transition='opacity .5s ease, transform .55s cubic-bezier(.2,.9,.3,1.2)';
-          im.style.opacity='1'; im.style.transform=`scale(1) rotate(${rot}deg)`; }, t); t+=900; });
-    }
+    articles:(el,step)=>runSeq(el,'articles',step),
+    highlightSeq:(el,step)=>runSeq(el,'highlightSeq',step),
+    stack:(el,step)=>runSeq(el,'stack',step)
   };
 
   // ---------- build ----------
@@ -335,6 +331,7 @@
         hint=document.getElementById('hint');
   let cur=0, els=[];
   const EXPORT=/[?&]export/.test(location.search); if(EXPORT) document.body.classList.add('export');
+  const _sm=/[?&]step=(\d+)/.exec(location.search); const EXPORT_STEP=_sm?+_sm[1]:0;
 
   S.forEach((s,i)=>{
     const d=document.createElement('div'); d.className='slide';
@@ -360,7 +357,7 @@
     counter.textContent=(cur+1)+' / '+S.length;
     thumbs.forEach((t,i)=>t.classList.toggle('cur',i===cur));
     els.forEach((el,i)=>{const v=el.querySelector('video'); if(v){ i===cur?(v.currentTime=0,v.play().catch(()=>{})):v.pause(); }});
-    const a=S[cur].anim; if(a&&anims[a]&&!(EXPORT&&a==='articles')) setTimeout(()=>anims[a](els[cur]), EXPORT?0:260);
+    const a=S[cur].anim; if(a&&anims[a]&&!NOSHOT){ if(EXPORT) anims[a](els[cur],EXPORT_STEP); else setTimeout(()=>anims[a](els[cur]),260); }
     [cur+1,cur+2].forEach(n=>{ if(S[n]){const im=new Image();im.src=S[n].src;} });
     try{history.replaceState(null,'','#'+(cur+1));}catch(e){}
   }
